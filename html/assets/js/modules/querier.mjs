@@ -7,7 +7,7 @@
 
 console.log("js/querier initialising");
 
-const url = "https://dashboard-back.pingpal.news";
+const url = "https://asperboard-back.pingpal.news";
 const port = -1;
 
 async function query(method = "GET", path = "/", body = {}, token = "") {

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://dashboard.pingpal.news/api/v1/oauth/callback/</loc>
+        <loc>https://asperboard.pingpal.news/api/v1/oauth/callback/</loc>
     </url>
     <url>
-        <loc>https://dashboard.pingpal.news/callback/</loc>
+        <loc>https://asperboard.pingpal.news/callback/</loc>
     </url>
     <url>
-        <loc>https://dashboard.pingpal.news/dashboard/</loc>
+        <loc>https://asperboard.pingpal.news/asperboard/</loc>
     </url>
     <url>
-        <loc>https://dashboard.pingpal.news/password/</loc>
+        <loc>https://asperboard.pingpal.news/password/</loc>
     </url>
     <url>
-        <loc>https://dashboard.pingpal.news/</loc>
+        <loc>https://asperboard.pingpal.news/</loc>
     </url>
 </urlset>
