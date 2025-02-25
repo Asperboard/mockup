@@ -7,7 +7,7 @@
 
 async function inject_widgets(element) {
     console.log("Injecting widgets");
-    const widgets = await window.update_server.get_user_widgets();
+    const widgets = await window.update_server.getUserWidgets();
     let cookie_widgets = [];
     let index = 0;
     const errMsg = "No widgets to display. To add a widget please choose a widget from the dropdown then click the 'Add widget' button";
@@ -40,7 +40,7 @@ async function inject_widgets(element) {
             cookie_widgets[cookie_widgets.length - 1].widget_index = index;
         }
         console.log(`index: ${index}, Widget:`, widget);
-        const widget_field = await window.widget_manager.create_widget_field(widget, cookie_widgets[cookie_widgets.length - 1].widget_index);
+        const widget_field = await window.widget_manager.createWidgetField(widget, cookie_widgets[cookie_widgets.length - 1].widget_index);
         element.innerHTML += widget_field;
         index++;
     }

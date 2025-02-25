@@ -7,7 +7,7 @@
 
 async function logout() {
     console.log("logout called");
-    const response = await window.update_server.log_user_out();
+    const response = await window.update_server.logUserOut();
     if (response.ok) {
         console.log("Logout successful:", response);
     } else {

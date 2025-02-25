@@ -12,7 +12,12 @@ function inject_submit_actions() {
         console.error("No login form found");
         return;
     }
-    if (document.getElementById("registerForm").querySelector('input[type="submit"]')) {
+    if (document.getElementById("registerForm") === null) {
+        console.error("No register form found");
+        return;
+    }
+    if (document.getElementById("loginForm").querySelector(`input[type="${personal}"]`)) {
+        console.log(`Found ${personal} button`);
         document.getElementById("loginForm").addEventListener(personal, function (event) {
             event.preventDefault();
             log_user_in();
@@ -21,7 +26,8 @@ function inject_submit_actions() {
             event.preventDefault();
             register_user();
         });
-    } else {
+    } else if (document.getElementById("loginForm").querySelector(`input[type="${professional}"]`)) {
+        console.log(`Found ${professional} button`);
         document.getElementById("loginForm").addEventListener(professional, function (event) {
             event.preventDefault();
             log_user_in_professional();
@@ -30,6 +36,8 @@ function inject_submit_actions() {
             event.preventDefault();
             register_user_professional();
         });
+    } else {
+        console.error("No submit button found");
     }
 }
 

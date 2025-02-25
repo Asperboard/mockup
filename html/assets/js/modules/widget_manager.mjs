@@ -44,7 +44,7 @@ async function createWidgetField(widgetItem, widgetIndex) {
         console.log("createWidgetField finished");
         return "";
     };
-    const widgetName = widgetItem.name.trimStart();
+    const widgetName = widgetItem.name;//.trimStart();
     const widgetId = `${widgetName}_${widgetIndex}`;
     const widgetContent = widgetItem.html;
     const internalWidgetId = widgetItem.db_index;
@@ -69,9 +69,9 @@ async function createWidgetField(widgetItem, widgetIndex) {
     widgetCode += `</aside>`;
     widgetCode += `</section>`;
     widgetCode += `<section class="widget_content_type">`;
-    widgetCode += `<select class="widget_dropdown">`;
-    widgetCode += await getRawWidgetOptions();
-    widgetCode += `</select>`;
+    // widgetCode += `<select class="widget_dropdown">`;
+    // widgetCode += await window.update_server.getWidgetContent();
+    // widgetCode += `</select>`;
     widgetCode += `<button class="button_desing" type="button" onclick="updateWidgetContent(this, ${internalWidgetId});">Apply</button>`;
     widgetCode += `</section>`;
     widgetCode += `<section class="widget_body">`;

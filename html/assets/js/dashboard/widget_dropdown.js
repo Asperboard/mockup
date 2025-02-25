@@ -7,7 +7,7 @@
 
 async function get_raw_widget_options() {
     let raw_widget_options = `<option value="option_default" disabled selected>Please choose a widget...</option>`;
-    const widgets = await window.update_server.get_available_widgets();
+    const widgets = await window.update_server.getAvailableWidgets();
     if (!widgets.ok) {
         console.error("Failed to get widgets");
         return "<option value='option_default' disabled selected>No widgets available</option>";
