@@ -74,34 +74,34 @@ async function login(email, password) {
     return response;
 };
 
-async function provide_missing_sso_info(username, password) {
+async function provideMissingSsoInfo(username, password) {
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
     if (!token) {
-        console.log("provide_missing_sso_info failed user is not logged in!");
+        console.log("provideMissingSsoInfo failed user is not logged in!");
         return { "status": 401, "data": null };
     }
     const response = await window.querier.post(window.constants.provide_missing_sso_info_endpoint, { username, password }, token);
     return response;
 }
 
-async function get_available_widgets() {
+async function getAvailableWidgets() {
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
     const widgets = await window.querier.get(window.constants.widget_name_list_endpoint, {}, token);
     console.log(`Available widgets ${JSON.stringify(widgets)}`);
     return widgets;
 };
 
-async function get_user_widgets() {
-    console.log("get_user_widgets called");
+async function getUserWidgets() {
+    console.log("getUserWidgets called");
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
-    const user_widgets = await window.querier.get(window.constants.widget_get_user_widgets_endpoint, {}, token);
-    return user_widgets;
+    const userWidgets = await window.querier.get(window.constants.widget_get_user_widgets_endpoint, {}, token);
+    return userWidgets;
 };
 
-async function get_widget_content(widget_name) {
-    console.log("manage_server.get_widget_content called");
+async function getWidgetContent(widgetName) {
+    console.log("manage_server.getWidgetContent called");
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
-    const widgets = await window.querier.get(`${window.constants.widget_get_widget_content}/${widget_name}`, {}, token);
+    const widgets = await window.querier.get(`${window.constants.widget_get_widget_content}/${widgetName}`, {}, token);
     console.log("widgets:", JSON.stringify(widgets));
     console.log("Looking for widget");
     if (widgets.status !== 200) {
@@ -112,77 +112,77 @@ async function get_widget_content(widget_name) {
         }
     }
     const resp = widgets.resp;
-    console.log("manage_server.get_widget_content finished");
+    console.log("manage_server.getWidgetContent finished");
     return { "status": 200, "data": resp };
 };
 
-async function add_widget_to_user(widget_type, widget_option = null) {
-    console.log("add_widget_to_user called");
+async function addWidgetToUser(widgetType, widgetOption = null) {
+    console.log("addWidgetToUser called");
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
     let option = "";
-    if (widget_option !== null) {
-        option = `/${widget_option}`;
+    if (widgetOption !== null) {
+        option = `/${widgetOption}`;
     }
-    const resp = await window.querier.post(`${window.constants.add_user_widget_endpoint}/${widget_type}${option}`, {}, token);
+    const resp = await window.querier.post(`${window.constants.add_user_widget_endpoint}/${widgetType}${option}`, {}, token);
     console.log("resp = ", resp);
     console.log(`JSON resp = ${JSON.stringify(resp)}`);
-    console.log("add_widget_to_user finished");
+    console.log("addWidgetToUser finished");
 }
 
-async function update_user_widgets(widget_index, widget_type, widget_position = null) {
-    console.log("update_user_widgets called");
+async function updateUserWidgets(widgetIndex, widgetType, widgetPosition = null) {
+    console.log("updateUserWidgets called");
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
     let position = {};
-    if (widget_position) {
-        position = { "location": widget_position };
+    if (widgetPosition) {
+        position = { "location": widgetPosition };
     }
-    const response = await window.querier.patch(`${window.constants.widget_update_user_widget_endpoint}/${widget_index}/${widget_type}`, position, token);
-    console.log("update_user_widgets finished");
+    const response = await window.querier.patch(`${window.constants.widget_update_user_widget_endpoint}/${widgetIndex}/${widgetType}`, position, token);
+    console.log("updateUserWidgets finished");
     return response;
 };
 
-async function remove_user_widget(name, widget_id) {
-    console.log("remove_user_widgets called");
+async function removeUserWidget(name, widgetId) {
+    console.log("removeUserWidgets called");
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
-    await window.querier.delete_query(`${window.constants.add_user_widget_endpoint}/${widget_id}`, {}, token);
-    console.log("remove_user_widgets finished");
+    await window.querier.deleteQuery(`${window.constants.add_user_widget_endpoint}/${widgetId}`, {}, token);
+    console.log("removeUserWidgets finished");
 };
 
-async function log_user_out() {
-    console.log("log_user_out called");
+async function logUserOut() {
+    console.log("logUserOut called");
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
     if (!token) {
         return true;
     }
-    const response = await window.querier.delete_query(window.constants.logout_page, {}, token);
+    const response = await window.querier.deleteQuery(window.constants.logout_page, {}, token);
     if (response.status === 200) {
-        console.log("log_user_out finished");
+        console.log("logUserOut finished");
         return true;
     }
     return false;
 };
 
-async function update_refresh(refresh_value) {
-    console.log("update_refresh called");
-    console.log("refresh_value:", refresh_value);
+async function updateRefresh(refreshValue) {
+    console.log("updateRefresh called");
+    console.log("refreshValue:", refreshValue);
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
-    const response = await window.querier.post(`${window.constants.user_refresh_wigets_endpoint}/${refresh_value}`, {}, token);
+    const response = await window.querier.post(`${window.constants.user_refresh_wigets_endpoint}/${refreshValue}`, {}, token);
     console.log("response:", response);
-    console.log("update_refresh finished");
+    console.log("updateRefresh finished");
 }
 
-async function get_refresh() {
-    console.log("get_refresh called");
+async function getRefresh() {
+    console.log("getRefresh called");
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
     const response = await window.querier.get(window.constants.user_refresh_wigets_endpoint, {}, token);
     console.log("JSON response:", JSON.stringify(response));
     console.log("response:", response);
-    console.log("get_refresh finished");
+    console.log("getRefresh finished");
     if (response.status !== 200) {
         console.log("Failed to get refresh value");
         return null;
     }
-    console.log("get_refresh finished with response", response.resp);
+    console.log("getRefresh finished with response", response.resp);
     return response.resp;
 }
 
@@ -190,16 +190,16 @@ async function get_refresh() {
 const update_server = {
     login,
     register,
-    get_refresh,
-    log_user_out,
-    update_refresh,
-    get_user_widgets,
-    remove_user_widget,
-    add_widget_to_user,
-    get_widget_content,
-    update_user_widgets,
-    get_available_widgets,
-    provide_missing_sso_info,
+    getRefresh,
+    logUserOut,
+    updateRefresh,
+    getUserWidgets,
+    removeUserWidget,
+    addWidgetToUser,
+    getWidgetContent,
+    updateUserWidgets,
+    getAvailableWidgets,
+    provideMissingSsoInfo,
 }
 
 export { update_server };

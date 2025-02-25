@@ -10,7 +10,7 @@ console.log("js/indexeddb_manager initialising");
 const DB_NAME = "dashboardDB";
 const STORE_NAME = "keyValueStore";
 
-function openDB(callback) {
+function openDb(callback) {
     let request = indexedDB.open(DB_NAME, 1);
 
     request.onupgradeneeded = function (event) {
@@ -30,7 +30,7 @@ function openDB(callback) {
 }
 
 function create(key, value) {
-    openDB(db => {
+    openDb(db => {
         let transaction = db.transaction(STORE_NAME, "readwrite");
         let store = transaction.objectStore(STORE_NAME);
         store.put({ key, value });
@@ -39,7 +39,7 @@ function create(key, value) {
 
 async function read(key) {
     const value = await new Promise((resolve, reject) => {
-        openDB(db => {
+        openDb(db => {
             let transaction = db.transaction(STORE_NAME, "readonly");
             let store = transaction.objectStore(STORE_NAME);
             let request = store.get(key);
@@ -59,7 +59,7 @@ async function read(key) {
 }
 
 function remove(key) {
-    openDB(db => {
+    openDb(db => {
         let transaction = db.transaction(STORE_NAME, "readwrite");
         let store = transaction.objectStore(STORE_NAME);
         store.delete(key);
@@ -67,7 +67,7 @@ function remove(key) {
 }
 
 function display() {
-    openDB(db => {
+    openDb(db => {
         let transaction = db.transaction(STORE_NAME, "readonly");
         let store = transaction.objectStore(STORE_NAME);
         let request = store.openCursor();
@@ -84,7 +84,7 @@ function display() {
 }
 
 function clearAll() {
-    openDB(db => {
+    openDb(db => {
         let transaction = db.transaction(STORE_NAME, "readwrite");
         let store = transaction.objectStore(STORE_NAME);
         store.clear();
@@ -92,7 +92,7 @@ function clearAll() {
 }
 
 function countEntries(callback) {
-    openDB(db => {
+    openDb(db => {
         let transaction = db.transaction(STORE_NAME, "readonly");
         let store = transaction.objectStore(STORE_NAME);
         let request = store.count();

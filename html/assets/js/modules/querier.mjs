@@ -77,7 +77,7 @@ async function patch(path = "/", body = {}, token = "") {
     return await query("PATCH", path, body, token);
 }
 
-async function delete_query(path = "/", body = {}, token = "") {
+async function deleteQuery(path = "/", body = {}, token = "") {
     return await query("DELETE", path, body, token);
 }
 
@@ -87,7 +87,7 @@ const queries = {
     put,
     post,
     patch,
-    delete_query
+    deleteQuery
 };
 
 export { queries };

@@ -63,30 +63,30 @@ function removeCookie(key) {
     document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 }
 
-function clear_all_cookies() {
+function clearAllCookies() {
     var cookies = document.cookie;
-    var cookies_array = cookies.split(";");
-    for (var i = 0; i < cookies_array.length; i++) {
-        var cookie = cookies_array[i];
-        var cookie_name = cookie.split("=")[0];
-        removeCookie(cookie_name);
+    var cookiesArray = cookies.split(";");
+    for (var i = 0; i < cookiesArray.length; i++) {
+        var cookie = cookiesArray[i];
+        var cookieName = cookie.split("=")[0];
+        removeCookie(cookieName);
     }
     console.log("Cookies cleared");
     alert("Cookies Cleared");
 }
 
-function count_all_cookies() {
+function countAllCookies() {
     var cookies = document.cookie;
-    var cookies_array = cookies.split(";");
-    var cookie_count = 0;
-    for (var i = 0; i < cookies_array.length; i++) {
-        var cookie = cookies_array[i];
-        var cookie_name = cookie.split("=")[0];
-        if (cookie_name != "") {
-            cookie_count++;
+    var cookiesArray = cookies.split(";");
+    var cookieCount = 0;
+    for (var i = 0; i < cookiesArray.length; i++) {
+        var cookie = cookiesArray[i];
+        var cookieName = cookie.split("=")[0];
+        if (cookieName != "") {
+            cookieCount++;
         }
     }
-    return cookie_count;
+    return cookieCount;
 }
 
 function displayCookies() {
@@ -130,8 +130,8 @@ const cookie = {
     readCookie,
     removeCookie,
     displayCookies,
-    clear_all_cookies,
-    count_all_cookies
+    clearAllCookies,
+    countAllCookies
 };
 
 export { cookie }

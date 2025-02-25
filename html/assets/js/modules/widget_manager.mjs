@@ -7,8 +7,8 @@
 
 console.log("js/widget_manager initialising");
 
-async function widgets_to_json(widgets) {
-    console.log("widgets_to_json called");
+async function widgetsToJson(widgets) {
+    console.log("widgetsToJson called");
     let widgetData = [];
 
     widgets.forEach(widget => {
@@ -24,96 +24,96 @@ async function widgets_to_json(widgets) {
         widgetData.push({ index, name, content });
     });
 
-    console.log("widgets_to_json finished");
+    console.log("widgetsToJson finished");
     return widgetData;
 }
 
-async function get_widget_index(widget_body_ID) {
-    console.log("get_widget_index called");
-    const widget_body = document.getElementById(widget_body_ID);
-    const widgets_present = widget_body.children.length;
-    console.log("widgets_present:", widgets_present);
-    console.log("get_widget_index finished");
-    return widgets_present;
+async function getWidgetIndex(widgetBodyID) {
+    console.log("getWidgetIndex called");
+    const widgetBody = document.getElementById(widgetBodyID);
+    const widgetsPresent = widgetBody.children.length;
+    console.log("widgetsPresent:", widgetsPresent);
+    console.log("getWidgetIndex finished");
+    return widgetsPresent;
 }
 
-async function create_widget_field(widget_item, widget_index) {
-    console.log("create_widget_field called");
-    if (widget_item == null) {
-        console.log("widget_item is null");
-        console.log("create_widget_field finished");
+async function createWidgetField(widgetItem, widgetIndex) {
+    console.log("createWidgetField called");
+    if (widgetItem == null) {
+        console.log("widgetItem is null");
+        console.log("createWidgetField finished");
         return "";
     };
-    const widget_name = widget_item.name.trimStart();
-    const widget_id = `${widget_name}_${widget_index}`;
-    const widget_content = widget_item.html;
-    const internal_widget_id = widget_item.db_index;
-    console.log(`widget_item: '${JSON.stringify(widget_item)}'`);
-    console.log(`widget_index: '${widget_index}'`);
-    console.log(`widget_id: '${widget_id}'`);
-    console.log(`widget_name: '${widget_name}'`);
-    console.log(`internal_widget_id: '${internal_widget_id}'`);
-    console.log(`widget_content: '${JSON.stringify(widget_content)}'`);
-    let widget_code = ``;
-    widget_code += `<article id="${widget_id}" class="widget" data-internal-id="${internal_widget_id}" data-name="${widget_name}">`;
-    widget_code += `<section class="widget_header">`;
-    widget_code += `<aside class="widget_header_index_position_box">`;
-    widget_code += `<p>Position:</p>`;
-    // widget_code += `<input type="number" class="widget_header_index_position" min="0" value="${widget_index}" onchange="update_widget_location(this);">`;
-    widget_code += `<p>${widget_index}</p>`;
-    widget_code += `</aside>`;
-    widget_code += `<aside>`;
-    widget_code += `<button class="button_desing" type="button" onclick="window.widget_manager.remove_widget('${widget_id}', '${widget_name}', '${internal_widget_id}');">`;
-    widget_code += `<i class="far fa-trash-alt"></i>`;
-    widget_code += `</button>`;
-    widget_code += `</aside>`;
-    widget_code += `</section>`;
-    widget_code += `<section class="widget_content_type">`;
-    widget_code += `<select class="widget_dropdown">`;
-    widget_code += await get_raw_widget_options();
-    widget_code += `</select>`;
-    widget_code += `<button class="button_desing" type="button" onclick="update_widget_content(this, ${internal_widget_id});">Apply</button>`;
-    widget_code += `</section>`;
-    widget_code += `<section class="widget_body">`;
-    widget_code += `<div>${widget_content}</div>`;
-    widget_code += `</section>`;
-    widget_code += `<section class="widget_footer">`;
-    widget_code += `<p class="widget_name_footer">Name: `;
-    widget_code += `<span>${widget_name}</span>`;
-    widget_code += `</p>`;
-    widget_code += `</section>`;
-    widget_code += `</article>`;
-    console.log("widget_code:", widget_code);
-    console.log("create_widget_field finished");
-    return widget_code;
+    const widgetName = widgetItem.name.trimStart();
+    const widgetId = `${widgetName}_${widgetIndex}`;
+    const widgetContent = widgetItem.html;
+    const internalWidgetId = widgetItem.db_index;
+    console.log(`widgetItem: '${JSON.stringify(widgetItem)}'`);
+    console.log(`widgetIndex: '${widgetIndex}'`);
+    console.log(`widgetId: '${widgetId}'`);
+    console.log(`widgetName: '${widgetName}'`);
+    console.log(`internalWidgetId: '${internalWidgetId}'`);
+    console.log(`widgetContent: '${JSON.stringify(widgetContent)}'`);
+    let widgetCode = ``;
+    widgetCode += `<article id="${widgetId}" class="widget" data-internal-id="${internalWidgetId}" data-name="${widgetName}">`;
+    widgetCode += `<section class="widget_header">`;
+    widgetCode += `<aside class="widget_header_index_position_box">`;
+    widgetCode += `<p>Position:</p>`;
+    // widgetCode += `<input type="number" class="widget_header_index_position" min="0" value="${widgetIndex}" onchange="updateWidgetLocation(this);">`;
+    widgetCode += `<p>${widgetIndex}</p>`;
+    widgetCode += `</aside>`;
+    widgetCode += `<aside>`;
+    widgetCode += `<button class="button_desing" type="button" onclick="window.widget_manager.removeWidget('${widgetId}', '${widgetName}', '${internalWidgetId}');">`;
+    widgetCode += `<i class="far fa-trash-alt"></i>`;
+    widgetCode += `</button>`;
+    widgetCode += `</aside>`;
+    widgetCode += `</section>`;
+    widgetCode += `<section class="widget_content_type">`;
+    widgetCode += `<select class="widget_dropdown">`;
+    widgetCode += await getRawWidgetOptions();
+    widgetCode += `</select>`;
+    widgetCode += `<button class="button_desing" type="button" onclick="updateWidgetContent(this, ${internalWidgetId});">Apply</button>`;
+    widgetCode += `</section>`;
+    widgetCode += `<section class="widget_body">`;
+    widgetCode += `<div>${widgetContent}</div>`;
+    widgetCode += `</section>`;
+    widgetCode += `<section class="widget_footer">`;
+    widgetCode += `<p class="widget_name_footer">Name: `;
+    widgetCode += `<span>${widgetName}</span>`;
+    widgetCode += `</p>`;
+    widgetCode += `</section>`;
+    widgetCode += `</article>`;
+    console.log("widgetCode:", widgetCode);
+    console.log("createWidgetField finished");
+    return widgetCode;
 }
 
-async function get_widget_content(widget_name) {
-    console.log("get_widget_content called");
-    const response = await window.update_server.get_widget_content(widget_name);
+async function getWidgetContent(widgetName) {
+    console.log("getWidgetContent called");
+    const response = await window.update_server.getWidgetContent(widgetName);
     if (response.status === 200) {
-        console.log("get_widget_content finished");
+        console.log("getWidgetContent finished");
         return response.data;
     }
-    console.log("get_widget_content finished");
+    console.log("getWidgetContent finished");
     return response;
 }
 
-async function add_widget(widget_body_ID, dropdown_ID) {
-    console.log("add_widget called");
-    const dropdown = document.getElementById(dropdown_ID);
+async function addWidget(widgetBodyID, dropdownID) {
+    console.log("addWidget called");
+    const dropdown = document.getElementById(dropdownID);
     if (dropdown.value === "option_default") {
         alert("Please select an option from the dropdown");
-        console.log("add_widget finished");
+        console.log("addWidget finished");
         return;
     }
-    const widget_body = document.getElementById(widget_body_ID);
-    const widget_content = await window.widget_manager.get_widget_content(dropdown.value);
-    console.log(`add_widget: Received content: ${JSON.stringify(widget_content)}`);
-    if ("status" in widget_content && widget_content.status !== 200) {
+    const widgetBody = document.getElementById(widgetBodyID);
+    const widgetContent = await window.widget_manager.getWidgetContent(dropdown.value);
+    console.log(`addWidget: Received content: ${JSON.stringify(widgetContent)}`);
+    if ("status" in widgetContent && widgetContent.status !== 200) {
         let msg = "";
-        if (widget_content.data !== null) {
-            msg = `Failed to fetch the widget: ${widget_content.data}`;
+        if (widgetContent.data !== null) {
+            msg = `Failed to fetch the widget: ${widgetContent.data}`;
         } else {
             msg = "Failed to fetch the widget";
         }
@@ -121,52 +121,52 @@ async function add_widget(widget_body_ID, dropdown_ID) {
         console.log(msg);
         return;
     }
-    const widget_index = widget_content.db_index || await window.widget_manager.get_widget_index(widget_body_ID);
-    console.log("widget_content:", widget_content);
-    await window.update_server.add_widget_to_user(widget_content.widget_id, null);
-    const widget_field = await window.widget_manager.create_widget_field(widget_content, widget_index);
+    const widgetIndex = widgetContent.db_index || await window.widget_manager.getWidgetIndex(widgetBodyID);
+    console.log("widgetContent:", widgetContent);
+    await window.update_server.addWidgetToUser(widgetContent.widget_id, null);
+    const widgetField = await window.widget_manager.createWidgetField(widgetContent, widgetIndex);
 
-    console.log("widget_body:", widget_body);
-    console.log("widget_field:", widget_field);
+    console.log("widgetBody:", widgetBody);
+    console.log("widgetField:", widgetField);
 
 
-    if (widget_body && widget_field) {
-        if (widget_body.innerHTML === "<p>No widgets to display. To add a widget please choose a widget from the dropdown then click the 'Add widget' button</p>") {
-            widget_body.innerHTML = "";
+    if (widgetBody && widgetField) {
+        if (widgetBody.innerHTML === "<p>No widgets to display. To add a widget please choose a widget from the dropdown then click the 'Add widget' button</p>") {
+            widgetBody.innerHTML = "";
         }
-        widget_body.innerHTML += widget_field;
+        widgetBody.innerHTML += widgetField;
     }
     dropdown.value = "option_default";
-    console.log("add_widget finished");
+    console.log("addWidget finished");
 }
 
-async function remove_widget(ID, name, widget_id) {
-    console.log("remove_widget called");
+async function removeWidget(ID, name, widgetId) {
+    console.log("removeWidget called");
     document.getElementById(ID).remove();
-    await window.update_server.remove_user_widget(name, widget_id);
+    await window.update_server.removeUserWidget(name, widgetId);
     const widgets = document.getElementById("widgets_body");
     widgets.innerHTML = "";
-    await inject_widgets(widgets);
-    console.log("remove_widget finished");
+    await injectWidgets(widgets);
+    console.log("removeWidget finished");
 }
 
-async function update_widget(ID) { }
+async function updateWidget(ID) { }
 
-async function update_widget_location(ID, element) {
-    console.log("update_widget_location called");
+async function updateWidgetLocation(ID, element) {
+    console.log("updateWidgetLocation called");
     console.log("ID:", ID);
-    console.log("update_widget_location finished");
+    console.log("updateWidgetLocation finished");
 }
 
 const widget_manager = {
-    add_widget,
-    remove_widget,
-    update_widget,
-    widgets_to_json,
-    get_widget_index,
-    get_widget_content,
-    create_widget_field,
-    update_widget_location
+    addWidget,
+    removeWidget,
+    updateWidget,
+    widgetsToJson,
+    getWidgetIndex,
+    getWidgetContent,
+    createWidgetField,
+    updateWidgetLocation
 }
 
 export { widget_manager };
