@@ -19,11 +19,9 @@ body {
   /*align-items: center;*/
   /*height: 100vh;*/
   top: 0;
-  background-color: #f4f4f4;
 }
 
 .my_container {
-  background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -31,6 +29,7 @@ body {
   width: 320px;
   overflow: hidden;
   position: relative;
+  border: 1px solid #ccc;
 }
 
 /* Toggle Switch */
@@ -67,9 +66,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
   transition: 0.4s;
   border-radius: 25px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
 }
 
 .slider:before {
@@ -79,9 +79,9 @@ body {
   width: 18px;
   left: 4px;
   bottom: 3.5px;
-  background-color: white;
   transition: 0.4s;
   border-radius: 50%;
+  background-color: white;
 }
 
 input:checked + .slider {
@@ -89,7 +89,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(24px);
+  transform: translateX(4px);
 }
 
 /* Form Wrapper */
@@ -131,7 +131,6 @@ form button {
   padding: 10px;
   width: 100%;
   background-color: #4CAF50;
-  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;

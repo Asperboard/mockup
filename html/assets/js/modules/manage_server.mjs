@@ -74,6 +74,74 @@ async function login(email, password) {
     return response;
 };
 
+async function register_professional(username, email, password) {
+    console.log("register called");
+    console.log("username:", username);
+    console.log("email:", email);
+    console.log("password:", password);
+    alert("Il s'agit d'un site de démonstration, votre compte n'existera que localement sur votre ordinateur. Vous pouvez utiliser l'adresse e-mail et le mot de passe de votre choix.");
+    // let response = await window.querier.post("/register", { username, email, password });
+    let response = { "ok": true, "resp": { "id": 1, "token": "Not a token", "username": username } };
+    console.log("response:", response);
+    console.log(`(register, before response) JSON response: ${JSON.stringify(response)}`);
+    if (response.ok) {
+        const user_id = response.resp.id;
+        const user_token = response.resp.token;
+        const user_username = response.resp.username;
+        console.log(`user_id: ${user_id}, user_token: ${user_token}, user_username: ${user_username}`);
+        if (user_id && user_token && user_username) {
+            window.cookie_manager.create(window.constants.user_id_cookie_name, user_id);
+            window.cookie_manager.create(window.constants.user_token_cookie_name, user_token);
+            window.cookie_manager.create(window.constants.user_username_cookie_name, user_username);
+            response.success = true;
+            response.ok = true;
+            return response;
+        } else {
+            response.success = false;
+            response.ok = false;
+        }
+    } else {
+        response.success = false;
+        response.ok = false;
+    }
+    console.log("response:", response);
+    console.log(`JSON response: ${JSON.stringify(response)}`);
+    console.log("register finished");
+    return response;
+};
+
+async function login_professional(email, password) {
+    console.log("login called");
+    console.log("email:", email);
+    console.log("password:", password);
+    let response = await window.querier.post(`${window.constants.user_login_endpoint}`, { email, password });
+    console.log("response:", response);
+    console.log(`JSON response: ${JSON.stringify(response)}`);
+    console.log("login finished");
+    if (response.ok) {
+        const user_id = response.resp.id;
+        const user_token = response.resp.token;
+        const user_username = response.resp.username;
+        console.log(`user_id: ${user_id}, user_token: ${user_token}, user_username: ${user_username}`);
+        if (user_token && user_id && user_username) {
+            window.cookie_manager.create(window.constants.user_id_cookie_name, user_id);
+            window.cookie_manager.create(window.constants.user_token_cookie_name, user_token);
+            window.cookie_manager.create(window.constants.user_username_cookie_name, user_username);
+            response.success = true;
+            response.ok = true;
+            return response;
+        } else {
+            response.success = false;
+        }
+    } else {
+        response.success = false;
+        response.ok = false;
+    }
+    console.log("response:", response);
+    console.log("login finished");
+    return response;
+};
+
 async function provideMissingSsoInfo(username, password) {
     const token = window.cookie_manager.read(window.constants.user_token_cookie_name);
     if (!token) {
@@ -198,7 +266,9 @@ const update_server = {
     addWidgetToUser,
     getWidgetContent,
     updateUserWidgets,
+    login_professional,
     getAvailableWidgets,
+    register_professional,
     provideMissingSsoInfo,
 }
 
