@@ -13,6 +13,12 @@
         <loc>https://asperboard.pingpal.news/password/</loc>
     </url>
     <url>
+        <loc>https://asperboard.pingpal.news/reset-password/</loc>
+    </url>
+    <url>
         <loc>https://asperboard.pingpal.news/</loc>
+    </url>
+    <url>
+        <loc>https://asperboard.pingpal.news/professional.html</loc>
     </url>
 </urlset>

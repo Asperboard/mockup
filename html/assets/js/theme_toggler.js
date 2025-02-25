@@ -168,7 +168,7 @@ const themeToggle = {
     injectThemeToggler
 };
 
-document.addEventListener("DOMContentLoaded", injectThemeToggler);
+// document.addEventListener("DOMContentLoaded", injectThemeToggler);
 
 window.themeToggle = themeToggle;
 

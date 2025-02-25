@@ -181,7 +181,23 @@ form button:hover {
   background-color: white;
 }
 
+.sso_button_france_connect {
+  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-color: transparent;
+  transition: color 1s ease, background-color 1s ease, transform 1s ease;
+}
+
+.sso_button_france_connect:hover {
+  box-shadow: 7px -4px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
 .fab.fa-github.sso_button_icon {
   padding-right: 2px;
+}
+
+.reset_password {
+  padding-top: 20px;
 }
 
