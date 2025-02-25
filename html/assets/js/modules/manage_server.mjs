@@ -13,7 +13,9 @@ async function register(username, email, password) {
     console.log("username:", username);
     console.log("email:", email);
     console.log("password:", password);
-    let response = await window.querier.post("/register", { username, email, password });
+    // let response = await window.querier.post("/register", { username, email, password });
+    alert("Il s'agit d'un site de démonstration, votre compte n'existera que localement sur votre ordinateur. Vous pouvez utiliser l'adresse e-mail et le mot de passe de votre choix.");
+    let response = { "ok": true, "resp": { "id": 1, "token": "Not a token", "username": email.split("@")[0] } };
     console.log("response:", response);
     console.log(`(register, before response) JSON response: ${JSON.stringify(response)}`);
     if (response.ok) {
@@ -46,7 +48,9 @@ async function login(email, password) {
     console.log("login called");
     console.log("email:", email);
     console.log("password:", password);
-    let response = await window.querier.post(`${window.constants.user_login_endpoint}`, { email, password });
+    // let response = await window.querier.post(`${window.constants.user_login_endpoint}`, { email, password });
+    alert("Il s'agit d'un site de démonstration, votre compte n'existera que localement sur votre ordinateur. Vous pouvez utiliser l'adresse e-mail et le mot de passe de votre choix.");
+    let response = { "ok": true, "resp": { "id": 1, "token": "Not a token", "username": email.split("@")[0] } };
     console.log("response:", response);
     console.log(`JSON response: ${JSON.stringify(response)}`);
     console.log("login finished");

@@ -7,6 +7,24 @@
         <loc>https://asperboard.pingpal.news/callback/</loc>
     </url>
     <url>
+        <loc>https://asperboard.pingpal.news/dashboard/pro/creation/</loc>
+    </url>
+    <url>
+        <loc>https://asperboard.pingpal.news/dashboard/pro/discuter/</loc>
+    </url>
+    <url>
+        <loc>https://asperboard.pingpal.news/dashboard/pro/suivi/</loc>
+    </url>
+    <url>
+        <loc>https://asperboard.pingpal.news/dashboard/user/dashboard/</loc>
+    </url>
+    <url>
+        <loc>https://asperboard.pingpal.news/dashboard/user/discuter/</loc>
+    </url>
+    <url>
+        <loc>https://asperboard.pingpal.news/dashboard/user/suivi/</loc>
+    </url>
+    <url>
         <loc>https://asperboard.pingpal.news/dashboard/</loc>
     </url>
     <url>
