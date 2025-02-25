@@ -1,0 +1,38 @@
+/* ** EPITECH PROJECT, 2024
+** mockup
+** File description:
+** banner.css */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 !important;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+  background-color: var(--bs-body-bg);
+}
+
+.cookie-banner button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cookie-banner button:hover {
+  background-color: invert(#4CAF50);
+}
+
+.style_popup_banner_container {
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
