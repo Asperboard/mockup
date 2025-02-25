@@ -6,36 +6,43 @@
 */
 
 function inject_submit_actions() {
+    const formId = "loginForm";
+    const registerFormId = "registerForm";
     const personal = "submit";
     const professional = "submit_professional";
-    if (document.getElementById("loginForm") === null) {
+    const elementFormId = document.getElementById(formId);
+    const elementRegisterFormId = document.getElementById(registerFormId);
+
+    if (elementFormId === null) {
         console.error("No login form found");
         return;
     }
-    if (document.getElementById("registerForm") === null) {
+    if (elementRegisterFormId === null) {
         console.error("No register form found");
         return;
     }
-    if (document.getElementById("loginForm").querySelector(`input[type="${personal}"]`)) {
+
+    if (elementFormId.querySelector(`button[type="${personal}"]`)) {
         console.log(`Found ${personal} button`);
-        document.getElementById("loginForm").addEventListener(personal, function (event) {
+        elementFormId.addEventListener(personal, function (event) {
             event.preventDefault();
             log_user_in();
         });
-        document.getElementById("registerForm").addEventListener(personal, function (event) {
+        elementRegisterFormId.addEventListener(personal, function (event) {
             event.preventDefault();
             register_user();
         });
-    } else if (document.getElementById("loginForm").querySelector(`input[type="${professional}"]`)) {
+    } else if (elementFormId.querySelector(`button[type="${professional}"]`)) {
         console.log(`Found ${professional} button`);
-        document.getElementById("loginForm").addEventListener(professional, function (event) {
+        elementFormId.addEventListener(professional, async function (event) {
             event.preventDefault();
             log_user_in_professional();
         });
-        document.getElementById("registerForm").addEventListener(professional, function (event) {
+        elementRegisterFormId.addEventListener(professional, async function (event) {
             event.preventDefault();
             register_user_professional();
         });
+        console.log(`${professional} button found and added event listener`);
     } else {
         console.error("No submit button found");
     }
