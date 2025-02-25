@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://asperboard.pingpal.news/password/">
     <meta property="og:url" content="https://asperboard.pingpal.news/password/">
     <meta name="twitter:title" content="Asperboard">
-    <meta name="author" content="Henry LETELLIER,">
+    <meta name="author" content="Henry LETELLIER, Flavien Maillard">
     <meta name="robots" content="index, follow, max-image-preview:standard">
     <meta name="copyright" content="© Henry Letellier">
     <meta name="publisher" content="Henry Letellier">
@@ -19,7 +19,7 @@
     <meta name="description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
     <meta property="og:image" content="https://asperboard.pingpal.news/assets/img/DashBoard logo.png">
     <script>
-        (function () {
+        (function() {
 
             // JavaScript snippet handling Dark/Light mode switching
 
@@ -146,18 +146,20 @@
         </section>
     </main>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/clearer.js"></script>
-    <script src="../assets/js/font-selector.js"></script>
-    <script src="../assets/js/login/update_error_message.js"></script>
-    <script src="../assets/js/modules/constants.mjs" type="module"></script>
-    <script src="../assets/js/modules/cookies.mjs" type="module"></script>
+    <script src="../assets/js/modules/cookie_manager.mjs" type="module"></script>
     <script src="../assets/js/modules/indexeddb_manager.mjs" type="module"></script>
+    <script src="../assets/js/modules/local_storage_manager.mjs" type="module"></script>
+    <script src="../assets/js/font-selector.js"></script>
     <script src="../assets/js/modules/manage_server.mjs" type="module"></script>
     <script src="../assets/js/modules/querier.mjs" type="module"></script>
-    <script src="../assets/js/modules/widget_manager.mjs" type="module"></script>
-    <script src="../assets/js/password/get_sso_details.js"></script>
     <script src="../assets/js/sleep.js"></script>
+    <script src="../assets/js/modules/widget_manager.mjs" type="module"></script>
     <script src="../assets/js/spacer.js"></script>
+    <script src="../assets/js/clearer.js"></script>
+    <script src="../assets/js/modules/constants.mjs" type="module"></script>
+    <script src="../assets/js/theme_toggler.js"></script>
+    <script src="../assets/js/login/update_error_message.js"></script>
+    <script src="../assets/js/password/get_sso_details.js"></script>
 </body>
 
 </html>

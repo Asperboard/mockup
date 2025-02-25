@@ -13,7 +13,7 @@ async function check_callback() {
     const user_token_cookie_name = window.constants.user_token_cookie_name || "user_token";
     const user_username_cookie_name = window.constants.user_username_cookie_name || "username";
     const home_page = window.constants.home_page || "/";
-    const dashboard_page = window.constants.dashboard_page || "/asperboard";
+    const dashboard_page = window.constants.dashboard_page || "/dashboard";
     const oauth_callback = window.constants.oauth_callback || "/oauth/callback";
     const node = url.split("?")[1];
     var data = "";

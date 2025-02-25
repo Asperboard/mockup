@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Asperboard</title>
     <meta name="theme-color" content="#86c8ed">
-    <link rel="canonical" href="https://asperboard.pingpal.news/asperboard/">
-    <meta property="og:url" content="https://asperboard.pingpal.news/asperboard/">
+    <link rel="canonical" href="https://asperboard.pingpal.news/dashboard/">
+    <meta property="og:url" content="https://asperboard.pingpal.news/dashboard/">
     <meta name="twitter:title" content="Asperboard">
-    <meta name="author" content="Henry LETELLIER,">
+    <meta name="author" content="Henry LETELLIER, Flavien Maillard">
     <meta name="robots" content="index, follow, max-image-preview:standard">
     <meta name="copyright" content="© Henry Letellier">
     <meta name="publisher" content="Henry Letellier">
@@ -19,7 +19,7 @@
     <meta name="description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
     <meta property="og:image" content="https://asperboard.pingpal.news/assets/img/DashBoard logo.png">
     <script>
-        (function () {
+        (function() {
 
             // JavaScript snippet handling Dark/Light mode switching
 
@@ -114,7 +114,7 @@
     <link rel="stylesheet" href="../assets/css/OpenDyslexicAlta.css">
     <link rel="stylesheet" href="../assets/css/OpenDyslexicMono.css">
     <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../assets/css/asperboard.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
     <link rel="stylesheet" href="../assets/css/detabelifyer.css">
     <link rel="stylesheet" href="../assets/css/dropdown.css">
     <link rel="stylesheet" href="../assets/css/github.css">
@@ -124,13 +124,11 @@
 
 <body>
     <section class="header">
-        <aside class="widget_button"><img src="../assets/img/DashBoard%20logo.png" width="45" height="45">
-            <section><select id="header_dropdown" name="options"></select></section><button class="button_desing" type="button" onclick="window.widget_manager.add_widget(&quot;widgets_body&quot;, &quot;header_dropdown&quot;);">Add widget</button>
-        </aside><i class="far fa-trash-alt" style="display:none;"></i>
+        <aside class="widget_button"><img src="../assets/img/DashBoard%20logo.png" width="45" height="45"></aside><i class="far fa-trash-alt" style="display:none;"></i>
         <aside>
             <p class="center_text">Welcome&nbsp;<span id="username_field" class="usrname">Text</span></p>
         </aside>
-        <div class="theme-switcher dropdown"><button class="btn btn-link dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="color: var(--bs-body-color);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+        <div class="theme-switcher dropdown" id="themeToggler"><button class="btn btn-link dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="color: var(--bs-body-color);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
                     <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
                 </svg></button>
             <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
@@ -144,30 +142,27 @@
         </div><select id="fontSelector" onchange="updateFont(this);"></select>
         <aside><button class="button_desing" type="button" onclick="logout();">Logout</button></aside>
     </section>
-    <section style="display:flex;">
-        <p>Refresh delay: </p><input type="number" id="refresh_delay" value="60" min="5" onchange="update_refresh(this)">
-        <p>seconds</p>
-    </section>
-    <section id="widgets_body"></section>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/clearer.js"></script>
-    <script src="../assets/js/asperboard/get_weather.js"></script>
-    <script src="../assets/js/asperboard/load_widgets.js"></script>
-    <script src="../assets/js/asperboard/logout.js"></script>
-    <script src="../assets/js/asperboard/my_onload.js"></script>
-    <script src="../assets/js/asperboard/refresh.js"></script>
-    <script src="../assets/js/asperboard/update_username.js"></script>
-    <script src="../assets/js/asperboard/widget_dropdown.js"></script>
-    <script src="../assets/js/font-selector.js"></script>
-    <script src="../assets/js/login/sso.js"></script>
-    <script src="../assets/js/modules/constants.mjs" type="module"></script>
-    <script src="../assets/js/modules/cookies.mjs" type="module"></script>
+    <script src="../assets/js/modules/cookie_manager.mjs" type="module"></script>
     <script src="../assets/js/modules/indexeddb_manager.mjs" type="module"></script>
+    <script src="../assets/js/modules/local_storage_manager.mjs" type="module"></script>
+    <script src="../assets/js/font-selector.js"></script>
     <script src="../assets/js/modules/manage_server.mjs" type="module"></script>
     <script src="../assets/js/modules/querier.mjs" type="module"></script>
-    <script src="../assets/js/modules/widget_manager.mjs" type="module"></script>
     <script src="../assets/js/sleep.js"></script>
+    <script src="../assets/js/modules/widget_manager.mjs" type="module"></script>
     <script src="../assets/js/spacer.js"></script>
+    <script src="../assets/js/clearer.js"></script>
+    <script src="../assets/js/modules/constants.mjs" type="module"></script>
+    <script src="../assets/js/theme_toggler.js"></script>
+    <script src="../assets/js/dashboard/get_weather.js"></script>
+    <script src="../assets/js/dashboard/load_widgets.js"></script>
+    <script src="../assets/js/dashboard/logout.js"></script>
+    <script src="../assets/js/dashboard/my_onload.js"></script>
+    <script src="../assets/js/dashboard/refresh.js"></script>
+    <script src="../assets/js/dashboard/update_username.js"></script>
+    <script src="../assets/js/dashboard/widget_dropdown.js"></script>
+    <script src="../assets/js/login/sso.js"></script>
 </body>
 
 </html>
