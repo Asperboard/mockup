@@ -13,7 +13,6 @@ async function register_user() {
     const password_confirmation = document.getElementById("registerPasswordConfirmation").value;
 
     console.log("window.location", window.location);
-    console.log("window.location.href", window.location.href);
     console.log("window.location.origin", window.location.origin);
     console.log("window.location.host", window.location.host);
     console.log("window.location.hostname", window.location.hostname);
@@ -37,7 +36,7 @@ async function register_user() {
 
     if (response.ok) {
         console.log("Registration successful:", response);
-        // window.location.href = window.constants.dashboard_page;
+        // window.location.pathname = window.constants.dashboard_page;
         window.location.pathname = dashboard;
     } else {
         update_error_message("Registration failed: " + response.message);

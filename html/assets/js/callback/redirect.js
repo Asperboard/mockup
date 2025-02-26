@@ -41,7 +41,7 @@ async function check_callback() {
         if (user_info.status != 200) {
             console.log("Login failed");
             logout();
-            window.location.href = home_page;
+            window.location.pathname = home_page;
             return;
         }
         const user_id = user_info.resp.id;
@@ -54,15 +54,15 @@ async function check_callback() {
         console.log(`typeof email: ${typeof user_email}`);
         if (!user_name || user_name === "" || user_name === "undefined" || user_name === "null" || user_name === null || user_name === undefined) {
             console.log(`Redirecting to ${user_password}`);
-            window.location.href = user_password;
+            window.location.pathname = user_password;
             return;
         }
         window.cookie_manager.create(user_username_cookie_name, user_name);
         console.log(`Redirecting to ${dashboard_page}`);
-        window.location.href = dashboard_page;
+        window.location.pathname = dashboard_page;
     } else {
         console.log("Login failed");
-        window.location.href = home_page;
+        window.location.pathname = home_page;
     }
 }
 

@@ -10,10 +10,10 @@
 <body>
     <p>If you are not redirected automatically, follow this <a id="redirect" href="./html/">link</a>.</p>
     <script type="text/javascript">
-        const url = "./html";
+        const url = "/html";
         document.getElementById("redirect").href = url;
         function redirect() {
-            window.location.href = url;
+            window.location.pathname = url;
         }
         window.onload = redirect;
     </script>

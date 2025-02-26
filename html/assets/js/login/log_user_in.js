@@ -11,7 +11,6 @@ async function log_user_in() {
     const password = document.getElementById("loginPassword").value;
 
     console.log("window.location", window.location);
-    console.log("window.location.href", window.location.href);
     console.log("window.location.origin", window.location.origin);
     console.log("window.location.host", window.location.host);
     console.log("window.location.hostname", window.location.hostname);

@@ -20,10 +20,10 @@ async function get_sso_details() {
     if (response.ok) {
         console.log("Registration successful:", response);
         window.cookie_manager.create(user_username_cookie_name, username);
-        window.location.href = window.constants.dashboard_page;
+        window.location.pathname = window.constants.dashboard_page;
     } else {
         update_error_message("Registration failed: " + response.message);
-        window.location.href = window.constants.home_page;
+        window.location.pathname = window.constants.home_page;
     }
 };
 
