@@ -1,0 +1,45 @@
+/* ** EPITECH PROJECT, 2024
+** mockup
+** File description:
+** chatbot.css */
+
+.chatBotAbstraction {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+.chatbotButton {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.chatbotButton button {
+  border: none;
+  background-color: #4CAF50;
+  color: inherit;
+  padding: 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.chatbotBuble {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 78%;
+  height: 62%;
+  background-color: var(--bs-body-bg);
+  border: 1px solid var(--bs-primary);
+}
+
+.chatbotBuble.btm-right-in, .chatbotBuble.tri-right:after {
+  background-color: var(--bs-body-bg);
+  border: 1px solid var(--bs-primary);
+}
+
