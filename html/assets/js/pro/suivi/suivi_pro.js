@@ -14,7 +14,7 @@ function generateSentMessage(message) {
     if (typeof message === "object") {
         messageField.appendChild(message);
     } else {
-        messageField.innerHTML = message;
+        messageField.innerText = message;
     }
     talkText.appendChild(messageField);
     receiverMessage.appendChild(talkText);
@@ -30,7 +30,7 @@ function generateReceivedMessage(message) {
     if (typeof message === "object") {
         messageField.appendChild(message);
     } else {
-        messageField.innerHTML = message;
+        messageField.innerText = message;
     }
     talkText.appendChild(messageField);
     receiverMessage.appendChild(talkText);
@@ -67,6 +67,22 @@ function beautifyMessage(message, sender, name, icon) {
     return receiverMessage;
 }
 
+function generateResults() {
+    const results = document.createElement("div");
+    results.classList.add("results");
+    const userGame = getIframeOfTheGame();
+    results.appendChild(userGame);
+    results.appendChild(document.createElement("br"));
+    results.appendChild(document.createElement("br"));
+    const userScore = document.createElement("p");
+    userScore.textContent = "Résultat: 4/5";
+    results.appendChild(userScore);
+    const userTime = document.createElement("p");
+    userTime.textContent = "Temps: 2 minutes";
+    results.appendChild(userTime);
+    return results;
+}
+
 function injectChatLog() {
     const chatLog = document.getElementById("chat-info");
     const username = window.cookie_manager.read("username") || "User";
@@ -81,7 +97,7 @@ function injectChatLog() {
             "sender": true,
             "name": username,
             "icon": "",
-            "message": `${getIframeOfTheGame()}<br>Résultat: 4/5<br>Temps: 2 minutes`
+            "message": generateResults()
         },
         {
             "sender": false,
