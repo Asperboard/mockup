@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créateur de Jeu de Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Créateur de Jeu de Quiz</h1>
+
+        <!-- Section de Création de Jeu -->
+        <div id="editor">
+            <button id="start-over-btn">Recommencer</button>
+            <h2>Créez Vos Questions</h2>
+            <label>Question :</label>
+            <input type="text" id="question-input" placeholder="Entrez la question...">
+
+            <label>Réponses :</label>
+            <div id="answers-inputs">
+                <input type="text" class="answer" placeholder="Réponse 1">
+                <input type="text" class="answer" placeholder="Réponse 2">
+                <input type="text" class="answer" placeholder="Réponse 3">
+                <input type="text" class="answer" placeholder="Réponse 4">
+            </div>
+
+            <label>Réponse Correcte (1-4) :</label>
+            <input type="number" id="correct-answer" min="1" max="4" value="1">
+
+            <button onclick="addQuestion()">Ajouter la question</button>
+
+            <h3>Liste des Questions</h3>
+            <ul id="questions-list"></ul>
+
+            <button onclick="startGame()">Commencer le Jeu</button>
+        </div>
+
+        <!-- Section de Jeu (Cachée Initialement) -->
+        <div id="game" style="display: none;">
+            <button id="play-again-btn" style="display: none;">Rejouer</button>
+            <button id="edit-set-btn" style="display: none;">Modifier le Set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text"></p>
+            <div id="answers-container"></div>
+            <p id="feedback"></p>
+            <button id="next-btn">Suivant</button>
+        </div>
+    </div>
+
+    <script type="text/JavaScript" src="./script.js"></script>
+</body>
+
+</html>

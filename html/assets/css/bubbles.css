@@ -3,6 +3,8 @@
 ** File description:
 ** bubbles.css */
 
+/* Taken from: https://codepen.io/Founts/details/AJyVOr */
+
 /* container */
 
 .container {
@@ -168,20 +170,7 @@
   border-color: lightyellow lightyellow transparent transparent;
 }
 
-/* left: -8px;
-  right: auto;
-  top: auto;
-	bottom: -40px;
-	border: 32px solid;
-	border-color: transparent transparent transparent #666;
-	left: 0px;
-  right: auto;
-  top: auto;
-	bottom: -20px;
-	border: 22px solid;
-	border-color: transparent transparent transparent lightyellow;
-
-/*Right triangle, placed bottom right side slightly in */
+/* Right triangle, placed bottom right side slightly in */
 
 .tri-right.border.btm-right:before {
   content: ' ';
@@ -274,5 +263,60 @@
 .talktext p {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
+}
+
+:root {
+  --message-receiver-background: #44c2eb;
+  --message-receiver-color: white;
+  --message-sender-background: lightgreen;
+  --message-sender-color: black;
+}
+
+.receiver {
+  background-color: var(--message-receiver-background);
+  color: var(--message-receiver-color);
+  text-align: left;
+}
+
+.receiver.left-top:after {
+  border-color: var(--message-receiver-background) transparent transparent transparent;
+}
+
+.sender {
+  background-color: var(--message-sender-background);
+  color: var(--message-sender-color);
+}
+
+.sender.right-top:after {
+  border-color: var(--message-sender-background) transparent transparent transparent;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.message-box.sender-text {
+  align-items: flex-end;
+}
+
+.message-box.receiver-text {
+  align-items: flex-start;
+}
+
+.message-box p {
+  margin: 0;
+}
+
+.sender-text {
+  margin-bottom: 10px;
+  justify-content: right;
+}
+
+.receiver-text {
+  margin-bottom: 10px;
+  justify-content: left;
 }
 

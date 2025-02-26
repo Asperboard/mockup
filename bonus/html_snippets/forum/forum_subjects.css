@@ -1,0 +1,45 @@
+/*
+** EPITECH PROJECT, 2024
+** mockup
+** File description:
+** forum_subjects.css
+*/
+
+.buttonList {
+    list-style-type: none;
+    /* Remove bullet points */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.buttonList li {
+    margin-bottom: 10px;
+    /* Add spacing between list items */
+}
+
+.buttonList button {
+    border: none;
+    /* Remove the button border */
+    background: transparent;
+    /* Make the background transparent */
+    padding: 2px 2px;
+    /* Add some padding for the button */
+    font-size: 16px;
+    /* Set font size */
+    cursor: pointer;
+    /* Change cursor on hover */
+    text-align: left;
+    /* Center the text inside the button */
+}
+
+/* Style the button when it is active */
+.buttonList button.active {
+    background-color: #007bff;
+    /* Change background color on active */
+    color: white;
+    /* Text color when active */
+    border-radius: 0px;
+    /* Optionally add border-radius for rounded corners */
+}
