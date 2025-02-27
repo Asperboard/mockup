@@ -7,14 +7,14 @@
 
 async function check_callback() {
     const url = window.location.href;
-    const user_password = window.constants.user_password || "/password";
-    const about_user = window.constants.about_user || "/user/about";
+    const user_password = checkHtmlPath() + (window.constants.user_password || "/password");
+    const about_user = checkHtmlPath() + (window.constants.about_user || "/user/about");
     const user_id_cookie_name = window.constants.user_id_cookie_name || "user_id";
     const user_token_cookie_name = window.constants.user_token_cookie_name || "user_token";
     const user_username_cookie_name = window.constants.user_username_cookie_name || "username";
-    const home_page = window.constants.home_page || "/";
-    const dashboard_page = window.constants.dashboard_page || "/dashboard";
-    const oauth_callback = window.constants.oauth_callback || "/oauth/callback";
+    const home_page = checkHtmlPath() + (window.constants.home_page || "/");
+    const dashboard_page = checkHtmlPath() + (window.constants.dashboard_page || "/dashboard");
+    const oauth_callback = checkHtmlPath() + (window.constants.oauth_callback || "/oauth/callback");
     const node = url.split("?")[1];
     var data = "";
     for (var i = 0; i < node.length; i++) {
@@ -41,7 +41,7 @@ async function check_callback() {
         if (user_info.status != 200) {
             console.log("Login failed");
             logout();
-            window.location.pathname = home_page;
+            window.location.pathname = checkHtmlPath() + home_page;
             return;
         }
         const user_id = user_info.resp.id;
@@ -54,15 +54,15 @@ async function check_callback() {
         console.log(`typeof email: ${typeof user_email}`);
         if (!user_name || user_name === "" || user_name === "undefined" || user_name === "null" || user_name === null || user_name === undefined) {
             console.log(`Redirecting to ${user_password}`);
-            window.location.pathname = user_password;
+            window.location.pathname = checkHtmlPath() + user_password;
             return;
         }
         window.cookie_manager.create(user_username_cookie_name, user_name);
         console.log(`Redirecting to ${dashboard_page}`);
-        window.location.pathname = dashboard_page;
+        window.location.pathname = checkHtmlPath() + dashboard_page;
     } else {
         console.log("Login failed");
-        window.location.pathname = home_page;
+        window.location.pathname = checkHtmlPath() + home_page;
     }
 }
 

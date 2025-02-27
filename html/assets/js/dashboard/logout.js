@@ -17,7 +17,7 @@ async function logout() {
     window.cookie_manager.remove(window.constants.user_username_cookie_name);
     window.cookie_manager.remove(window.constants.user_id_cookie_name);
     window.indexedDB_manager.remove(window.constants.widget_cookie_name);
-    window.location.pathname = window.constants.home_page;
+    window.location.pathname = checkHtmlPath() + window.constants.home_page;
     console.log("logout finished");
 }
 
@@ -33,6 +33,6 @@ async function logout_pro() {
     window.cookie_manager.remove(window.constants.user_username_cookie_name);
     window.cookie_manager.remove(window.constants.user_id_cookie_name);
     window.indexedDB_manager.remove(window.constants.widget_cookie_name);
-    window.location.pathname = "/professional.html";
+    window.location.pathname = checkHtmlPath() + "/professional.html";
     console.log("logout_pro finished");
 }
