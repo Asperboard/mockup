@@ -35,7 +35,7 @@ function chatbotInjector() {
             </div>
         </div>
     </div>`;
-    finalHTML += `<div class="chatbotButton"><button onclick="toggleSpero()"><img src="AB logo.png" width="50" height="49" /></button></div>`;
+    finalHTML += `<div class="chatbotButton"><button onclick="toggleSpero()"><img src="assets/img/AB-logo.png" width="50" height="49" /></button></div>`;
     finalHTML += "</div>";
     section.innerHTML = finalHTML;
     console.log("chatbotInjector finished");
