@@ -6,11 +6,14 @@
 */
 
 async function checkImageExists(url) {
-    return await new Promise((resolve) => {
+    return new Promise((resolve) => {
         const img = new Image();
         img.onload = () => resolve(true);
         img.onerror = () => resolve(false);
         img.src = url;
-    });
+
+        img.referrerPolicy = "no-referrer";
+    }).catch(() => false);
 }
+
 
