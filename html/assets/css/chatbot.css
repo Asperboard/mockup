@@ -3,12 +3,12 @@
 ** File description:
 ** chatbot.css */
 
-.chatBotAbstraction {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  height: 300px;
+:root {
+  --bot-background-color: #44c2eb;
+  --bot-color: black;
+  --bot-link-clicked: purple;
+  --user-background-color: lightgreen;
+  --user-color: black;
 }
 
 .chatbotButton {
@@ -29,17 +29,119 @@
   -moz-border-radius: 50%;
 }
 
-.chatbotBuble {
+.chatbotBubble {
   padding: 10px;
   margin-bottom: 10px;
-  width: 78%;
-  height: 62%;
+  width: 82%;
+  height: 64%;
   background-color: var(--bs-body-bg);
   border: 1px solid var(--bs-primary);
 }
 
-.chatbotBuble.btm-right-in, .chatbotBuble.tri-right:after {
+.chatbotBubble.btm-right-in, .chatbotBubble.tri-right:after {
   background-color: var(--bs-body-bg);
   border: 1px solid var(--bs-primary);
+}
+
+.chatbot_chat_container {
+  max-height: inherit;
+  height: 90%;
+  width: 100%;
+}
+
+.chatbot_chat_history {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  max-height: 90%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  border: 1px solid var(--bs-primary);
+}
+
+.inner_bubble_override {
+  display: inline-block;
+  max-width: 80%;
+  width: 100%;
+}
+
+.bubble_position_left {
+  justify-content: flex-start;
+  margin: 6px;
+  margin-bottom: 22px;
+  margin-left: 4px;
+  background-color: var(--bot-background-color);
+  color: var(--bot-color);
+}
+
+.bubble_position_left.tri-right.btm-left-in:after {
+  border-color: var(--bot-background-color) transparent transparent var(--bot-background-color);
+}
+
+.bubble_position_right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 6px;
+  margin-bottom: 22px;
+  margin-right: 4px;
+  background-color: var(--user-background-color);
+  color: var(--user-color);
+}
+
+.bubble_position_right.tri-right.btm-right-in:after {
+  border-color: var(--user-background-color) var(--user-background-color) transparent transparent;
+}
+
+.bubble_position_left .talktext p a:visited {
+  color: var(--bot-link-clicked);
+}
+
+.bubble_position_left .talktext p a, .bubble_position_left .talktext p a:hover, .bubble_position_left .talktext p a:active {
+  color: var(--bot-color);
+}
+
+.bubble_position_left .talktext p a:hover, .bubble_position_left .talktext p a:active {
+  font-style: italic;
+}
+
+.bubble_position_left .talktext p a:active {
+  text-decoration: none;
+}
+
+@media (max-width: 699px) {
+  .chatBotAbstraction {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 94%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 699px) {
+  .chatbotBubble {
+    top: 0px;
+    left: -22px;
+  }
+}
+
+@media (min-width: 700px) {
+  .chatBotAbstraction {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 364px;
+    height: 464px;
+  }
+}
+
+@media (min-width: 700px) {
+  .chatbotBubble {
+    top: 74px;
+    left: -12px;
+  }
 }
 

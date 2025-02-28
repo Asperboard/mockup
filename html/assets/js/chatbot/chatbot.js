@@ -44,9 +44,35 @@ async function chatbotInjector() {
         image_url = image_base64;
     }
     let finalHTML = "<div class='chatBotAbstraction'>";
-    finalHTML += `<div class="chatbotBuble talk-bubble tri-right round btm-right-in" id="speroBubble" style="display: none;">
-        <div class="talktext">
-            <p>Bonjour, je suis Spero, comment puis-je vous aider aujourd&#39;hui?</p>
+    finalHTML += `<div class="talk-bubble tri-right round chatbotBubble" id="speroBubble" style="display: none;">
+        <div class="talktext chatbot_chat_container">
+            <div class="chatbot_chat_history">
+                <div class="talk-bubble tri-right btm-left-in inner_bubble_override bubble_position_left">
+                    <div class="talktext">
+                        <p>Bonjour, Je suis Spéro, comment puis-je vous aider aujourd&#39;hui?</p>
+                    </div>
+                </div>
+                <div class="talk-bubble tri-right btm-right-in inner_bubble_override bubble_position_right">
+                    <div class="talktext">
+                        <p>Bonjour Spéro comment vas-tu?</p>
+                    </div>
+                </div>
+                <div class="talk-bubble tri-right btm-left-in inner_bubble_override bubble_position_left">
+                    <div class="talktext">
+                        <p>Je vais bien et toi?<br>En quoi puis-je t'aider aujourd'hui?</p>
+                    </div>
+                </div>
+                <div class="talk-bubble tri-right btm-right-in inner_bubble_override bubble_position_right">
+                    <div class="talktext">
+                        <p>J'aimerais donner mon avis concernant ce site, où puis-je le faire?</p>
+                    </div>
+                </div>
+                <div class="talk-bubble tri-right btm-left-in inner_bubble_override bubble_position_left">
+                    <div class="talktext">
+                        <p>Tu peux le faire en remplissant le form suivant: <a href="javascript:void(0)" onclick="window.open('${checkHtmlPath()}/feedback', '_blank', 'width=640px,height=480px')">${window.location.origin}${checkHtmlPath()}/feedback</a></p>
+                    </div>
+                </div>
+            </div>
             <br>
             <div style="display: flex;gap: 2px;">
                 <input type="text" placeholder="Écrire à Spéro..." style="width:138px;"/>
@@ -58,6 +84,7 @@ async function chatbotInjector() {
                     </i>
                 </button>
             </div>
+            <br>
         </div>
     </div>`;
     finalHTML += `
