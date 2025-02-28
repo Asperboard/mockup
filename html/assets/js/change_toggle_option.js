@@ -6,5 +6,5 @@
 */
 
 function change_toggle_option(url) {
-    window.location.pathname = url;
+    window.location.pathname = checkHtmlPath() + url;
 }

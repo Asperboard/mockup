@@ -28,7 +28,7 @@ async function log_user_in() {
     if (response.ok) {
         console.log("Login successful:", response);
         // window.location.pathname = window.constants.dashboard_page;
-        window.location.pathname = dashboard;
+        window.location.pathname = checkHtmlPath() + dashboard;
     } else {
         update_error_message("Login failed: " + response.message);
     }
@@ -49,7 +49,7 @@ async function log_user_in_professional() {
     if (response.ok) {
         console.log("Login successful:", response);
         // window.location.pathname = window.constants.dashboard_page;
-        window.location.pathname = suivi;
+        window.location.pathname = checkHtmlPath() + suivi;
     } else {
         update_error_message("Login failed: " + response.message);
     }

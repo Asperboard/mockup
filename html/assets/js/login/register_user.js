@@ -37,7 +37,7 @@ async function register_user() {
     if (response.ok) {
         console.log("Registration successful:", response);
         // window.location.pathname = window.constants.dashboard_page;
-        window.location.pathname = dashboard;
+        window.location.pathname = checkHtmlPath() + dashboard;
     } else {
         update_error_message("Registration failed: " + response.message);
     }
@@ -66,7 +66,7 @@ async function register_user_professional() {
     if (response.ok) {
         console.log("Registration successful:", response);
         // window.location.pathname = window.constants.dashboard_page;
-        window.location.pathname = suivi;
+        window.location.pathname = checkHtmlPath() + suivi;
     } else {
         update_error_message("Registration failed: " + response.message);
     }
