@@ -27,7 +27,7 @@ function getTestWidgetEmotions() {
 
 function getIframeOfTheGame() {
     // URL for the iframe (can be dynamically set as needed)
-    var iframeUrl = `${window.location.origin}/games`;
+    var iframeUrl = `${window.location.origin}${checkHtmlPath()}/games`;
     const button = document.createElement("button");
     button.onclick = function () {
         window.open(iframeUrl, '_blank', 'width=600,height=400');

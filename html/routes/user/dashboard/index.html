@@ -172,13 +172,17 @@
             /* Prevents scrolling */
         }
     </style><script type="text/JavaScript">
-        const url = `${window.location.origin}/games`;
+    function load_info() {
+        const url = `${window.location.origin}${checkHtmlPath()}/games`;
         const iframe = document.createElement('iframe');
         iframe.src = url;
         iframe.id = 'iframe-quizz-node';
         const iframeQuizzNode = document.getElementById('iframe-quizz-node-div');
         iframeQuizzNode.appendChild(iframe);
+    }
+    document.addEventListener('DOMContentLoaded', load_info);
     </script>
+
             </section>
             <section></section>
         </aside>
