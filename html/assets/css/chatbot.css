@@ -4,10 +4,10 @@
 ** chatbot.css */
 
 :root {
-  --bot-background-color: #44c2eb;
+  --bot-background-color: cadetblue;
   --bot-color: black;
   --bot-link-clicked: purple;
-  --user-background-color: lightgreen;
+  --user-background-color: steelblue;
   --user-color: black;
 }
 
@@ -21,7 +21,7 @@
 
 .chatbotButton button {
   border: none;
-  background-color: #4CAF50;
+  background-color: steelblue;
   color: inherit;
   padding: 0;
   border-radius: 50%;

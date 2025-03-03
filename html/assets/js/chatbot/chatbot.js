@@ -47,27 +47,27 @@ async function chatbotInjector() {
     finalHTML += `<div class="talk-bubble tri-right round chatbotBubble" id="speroBubble" style="display: none;">
         <div class="talktext chatbot_chat_container">
             <div class="chatbot_chat_history">
-                <div class="talk-bubble tri-right btm-left-in inner_bubble_override bubble_position_left">
+                <div class="talk-bubble tri-right btm-left-in round inner_bubble_override bubble_position_left">
                     <div class="talktext">
                         <p>Bonjour, Je suis Spéro, comment puis-je vous aider aujourd&#39;hui?</p>
                     </div>
                 </div>
-                <div class="talk-bubble tri-right btm-right-in inner_bubble_override bubble_position_right">
+                <div class="talk-bubble tri-right btm-right-in round  inner_bubble_override bubble_position_right">
                     <div class="talktext">
                         <p>Bonjour Spéro comment vas-tu?</p>
                     </div>
                 </div>
-                <div class="talk-bubble tri-right btm-left-in inner_bubble_override bubble_position_left">
+                <div class="talk-bubble tri-right btm-left-in round inner_bubble_override bubble_position_left">
                     <div class="talktext">
                         <p>Je vais bien et toi?<br>En quoi puis-je t'aider aujourd'hui?</p>
                     </div>
                 </div>
-                <div class="talk-bubble tri-right btm-right-in inner_bubble_override bubble_position_right">
+                <div class="talk-bubble tri-right btm-right-in round inner_bubble_override bubble_position_right">
                     <div class="talktext">
                         <p>J'aimerais donner mon avis concernant ce site, où puis-je le faire?</p>
                     </div>
                 </div>
-                <div class="talk-bubble tri-right btm-left-in inner_bubble_override bubble_position_left">
+                <div class="talk-bubble tri-right btm-left-in round inner_bubble_override bubble_position_left">
                     <div class="talktext">
                         <p>Tu peux le faire en remplissant le form suivant: <a href="javascript:void(0)" onclick="window.open('${checkHtmlPath()}/feedback', '_blank', 'width=640px,height=480px')">${window.location.origin}${checkHtmlPath()}/feedback</a></p>
                     </div>

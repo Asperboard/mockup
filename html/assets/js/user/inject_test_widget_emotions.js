@@ -29,6 +29,7 @@ function getIframeOfTheGame() {
     // URL for the iframe (can be dynamically set as needed)
     var iframeUrl = `${window.location.origin}${checkHtmlPath()}/games`;
     const button = document.createElement("button");
+    button.classList.add("message_button");
     button.onclick = function () {
         window.open(iframeUrl, '_blank', 'width=600,height=400');
     }
