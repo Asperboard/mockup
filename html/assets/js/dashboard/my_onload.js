@@ -18,4 +18,5 @@ async function my_onload() {
 }
 
 // Add a a rule to only run once the page is loaded
-document.addEventListener("DOMContentLoaded", my_onload);
+// The functionality has been ignored because not used in the project
+// document.addEventListener("DOMContentLoaded", my_onload);

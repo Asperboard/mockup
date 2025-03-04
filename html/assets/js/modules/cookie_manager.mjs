@@ -6,6 +6,25 @@
 */
 
 console.log("js/cookie_dealing initialising");
+
+function toSeconds(seconds) {
+    const now = new Date();
+    now.setSeconds(now.getSeconds() + seconds);
+    return now.toUTCString();
+}
+
+function toMinute(minutes) {
+    const now = new Date();
+    now.setMinutes(now.getMinutes() + minutes);
+    return now.toUTCString();
+}
+
+function toHour(hours) {
+    const now = new Date();
+    now.setHours(now.getHours() + hours);
+    return now.toUTCString();
+}
+
 function createMany(string) {
     document.cookie = string
 }
@@ -120,6 +139,9 @@ function display() {
 console.log("js/cookie_dealing initialised");
 
 const cookie = {
+    toSeconds,
+    toMinute,
+    toHour,
     createMany,
     create,
     read,

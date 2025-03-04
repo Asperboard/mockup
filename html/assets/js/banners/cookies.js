@@ -8,15 +8,15 @@
 const cookie_consent_cookie_name = 'cookie_consent';
 
 function inject_cookie_banner(ID = 'cookie_banner') {
-    const banner = document.createElement('div');
-    banner.id = ID;
+    const banner = document.getElementById(ID) || document.createElement("div");
     banner.classList.add("cookie-banner");
     banner.classList.add("style_popup_banner_container");
     banner.innerHTML = `
-        <p>This website uses cookies to ensure you get the best experience on our website.</p>
-        <button onclick="acceptCookies(this)">Accept</button>
+        <p data-type="cookie">
+            Ce site utilise des cookies qui sont essentiels pour sont bon fonctionnement, aucune de vos données ne sort de votre ordinateur.
+            <button onclick="acceptCookies(this.parentElement)">Accepter</button>
+        </p>
     `;
-    document.body.appendChild(banner);
 }
 
 function acceptCookies(element) {
