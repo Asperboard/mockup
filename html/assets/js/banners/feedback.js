@@ -18,9 +18,14 @@ function inject_feedback_banner(ID = 'feedback_banner') {
             Votre avis nous intéresse:
             <button onclick="${trigger_node}">Remplir le formulaire ${opens_externally}</button>
             <button onclick="permaHideFeedbackBanner(this.parentElement)">Ne plus montrer</button>
+            <button onclick="redirectToQrCode()">QR code</button>
             <button data-theme="cross" onclick="hideFeedbackBanner(this.parentElement)">X</button>
         </p>
     `;
+}
+
+function redirectToQrCode() {
+    window.location.pathname = `${checkHtmlPath()}/feedback/qr`;
 }
 
 function permaHideFeedbackBanner(element) {
