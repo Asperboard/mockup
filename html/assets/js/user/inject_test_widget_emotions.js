@@ -27,13 +27,15 @@ function getTestWidgetEmotions() {
 
 function getIframeOfTheGame() {
     // URL for the iframe (can be dynamically set as needed)
+    const opens_externally = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><i class="fas fa-external-link-alt"></i>`;
     var iframeUrl = `${window.location.origin}${checkHtmlPath()}/games`;
     const button = document.createElement("button");
     button.classList.add("message_button");
     button.onclick = function () {
         window.open(iframeUrl, '_blank', 'width=600,height=400');
     }
-    button.textContent = "Jeux des émotions";
+    button.textContent = "Jeux des émotions ";
+    button.innerHTML += opens_externally;
     return button;
 
 }
