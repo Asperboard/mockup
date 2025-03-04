@@ -156,30 +156,47 @@
     </section><!-- End: controls -->
     <!-- Start: game -->
     <section class="creator_widget_container">
-        <!-- Start: demo_quizz -->
-        <aside class="widget">
-            <section style="display:flex;flex-direction:row;justify-content:space-between;">
-                <div style="display:flex;flex-direction:row;">
-                    <p>Publique: </p>
-                    <div class="border-0 d-flex border rounded-pill xToggle" style="width:32px;height:18px;cursor:pointer;" data-checked="false"><i class="fas fa-circle" style="height:100%;padding-top:1px;padding-left:2px;padding-right:2px;color:white;padding-bottom:5px;"></i></div>
-                </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size:13px;"></i></button>
-            </section>
-            <section class="quizz_container">
-                <h1>Créateur de quiz</h1>
-                <div id="editor">
-                    <h2>Créez vos questions</h2><label>Question :</label><input type="text" class="question_quizz" id="question-input" placeholder="Entrez la question..."><br><label>Réponses :</label>
-                    <div id="answers-inputs"><input type="text" class="answer" placeholder="Réponse 1"><input type="text" class="answer" placeholder="Réponse 2"><input type="text" class="answer" placeholder="Réponse 3"><input type="text" class="answer" placeholder="Réponse 4"></div><br><label>Réponse correcte (1-4) :</label><input type="number" class="question_quizz" id="correct-answer" max="4" min="1" value="1"><button>Ajouter la question</button>
-                    <h3>Liste des questions</h3>
-                    <ul id="questions-list"></ul><button>Commencer le jeu</button><button id="start-over-btn">Recommencer</button>
-                </div>
-                <div id="game" style="display:none;"><button id="play-again-btn" style="display:none;">Rejouer</button><button id="edit-set-btn" style="display:none;">Modifier le set</button>
-                    <h2>Jouez à Votre Quiz</h2>
-                    <p id="question-text"></p>
-                    <div id="answers-container"></div>
-                    <p id="feedback"></p><button id="next-btn">Suivant</button>
-                </div>
-            </section>
-        </aside><!-- End: demo_quizz -->
+        <!-- Start: demo_quizz --><!-- <aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Créateur de quiz</h1>
+        <p>Titre: <input id="quiz-title" type="text" placeholder="Nom du quiz" /></p>
+        <p>Description:</p>
+        <input id="quiz-description" type="textarea" placeholder="Description du quiz" />
+        <button id="save-quiz-btn">Sauvegarder</button>
+        <div id="editor">
+            <h2>Créez vos questions</h2>
+            <label>Question :</label>
+            <input id="question-input" class="question_quizz" type="text" placeholder="Entrez la question..." />
+            <br />
+            <label>Réponses :</label>
+            <div id="answers-inputs">
+                <input class="answer" type="text" placeholder="Réponse 1" />
+                <input class="answer" type="text" placeholder="Réponse 2" />
+                <input class="answer" type="text" placeholder="Réponse 3" />
+                <input class="answer" type="text" placeholder="Réponse 4" />
+            </div>
+            <br />
+            <label>Réponse correcte (1-4) :</label>
+            <input id="correct-answer" class="question_quizz" type="number" max="4" min="1" value="1" />
+            <button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list"></ul><button>Commencer le jeu</button><button id="start-over-btn">Recommencer</button>
+        </div>
+        <div id="game" style="display: none;"><button id="play-again-btn" style="display: none;">Rejouer</button><button id="edit-set-btn" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text"></p>
+            <div id="answers-container"></div>
+            <p id="feedback"></p><button id="next-btn">Suivant</button>
+        </div>
+    </section>
+</aside> -->
+<!-- End: demo_quizz -->
         <!-- Start: text_article --><aside class="widget">
     <section style="display: flex;flex-direction: row;justify-content: space-between;">
         <div style="display: flex;flex-direction: row;">
@@ -203,7 +220,41 @@
         </div>
     </section>
 </aside><!-- End: text_article -->
-        <!-- Start: q&a --><aside class="widget">
+        <!-- Start: q&a --><!-- <aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Q&A</h1>
+        <div id="editor-1">
+            <h2>Créez vos questions</h2>
+            <label>Question :</label>
+            <input id="question-input-1" class="question_quizz" type="text" placeholder="Entrez la question..." />
+            <br />
+            <label>Réponses :</label>
+            <div id="answers-inputs-1">
+                <input class="answer" type="text" placeholder="Réponse" />
+            </div>
+            <br />
+            <label>Réponse correcte (1-4) :</label>
+            <input id="correct-answer-1" class="question_quizz" type="number" max="4" min="1" value="1" />
+            <button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list-1"></ul><button>Commencer le jeu</button><button id="start-over-btn-1">Recommencer</button>
+        </div>
+        <div id="game-1" style="display: none;"><button id="play-again-btn-1" style="display: none;">Rejouer</button><button id="edit-set-btn-1" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text-1"></p>
+            <div id="answers-container-1"></div>
+            <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
+        </div>
+    </section>
+</aside> -->
+<!-- End: q&a -->
+        <!-- Start: video --><!-- <aside class="widget">
     <section style="display: flex;flex-direction: row;justify-content: space-between;">
         <div style="display: flex;flex-direction: row;">
             <p>Publique: </p>
@@ -225,8 +276,9 @@
             <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
         </div>
     </section>
-</aside><!-- End: q&a -->
-        <!-- Start: video --><aside class="widget">
+</aside> -->
+<!-- End: video -->
+        <!-- Start: link --><!-- <aside class="widget">
     <section style="display: flex;flex-direction: row;justify-content: space-between;">
         <div style="display: flex;flex-direction: row;">
             <p>Publique: </p>
@@ -248,8 +300,9 @@
             <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
         </div>
     </section>
-</aside><!-- End: video -->
-        <!-- Start: link --><aside class="widget">
+</aside> -->
+<!-- End: link -->
+        <!-- Start: iframe --><!-- <aside class="widget">
     <section style="display: flex;flex-direction: row;justify-content: space-between;">
         <div style="display: flex;flex-direction: row;">
             <p>Publique: </p>
@@ -271,30 +324,8 @@
             <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
         </div>
     </section>
-</aside><!-- End: link -->
-        <!-- Start: iframe --><aside class="widget">
-    <section style="display: flex;flex-direction: row;justify-content: space-between;">
-        <div style="display: flex;flex-direction: row;">
-            <p>Publique: </p>
-            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
-        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
-    </section>
-    <section class="quizz_container">
-        <h1>Créateur de quiz</h1>
-        <div id="editor-1">
-            <h2>Créez vos questions</h2><label>Question :</label><input id="question-input-1" class="question_quizz" type="text" placeholder="Entrez la question..." /><br /><label>Réponses :</label>
-            <div id="answers-inputs-1"><input class="answer" type="text" placeholder="Réponse 1" /><input class="answer" type="text" placeholder="Réponse 2" /><input class="answer" type="text" placeholder="Réponse 3" /><input class="answer" type="text" placeholder="Réponse 4" /></div><br /><label>Réponse correcte (1-4) :</label><input id="correct-answer-1" class="question_quizz" type="number" max="4" min="1" value="1" /><button>Ajouter la question</button>
-            <h3>Liste des questions</h3>
-            <ul id="questions-list-1"></ul><button>Commencer le jeu</button><button id="start-over-btn-1">Recommencer</button>
-        </div>
-        <div id="game-1" style="display: none;"><button id="play-again-btn-1" style="display: none;">Rejouer</button><button id="edit-set-btn-1" style="display: none;">Modifier le set</button>
-            <h2>Jouez à Votre Quiz</h2>
-            <p id="question-text-1"></p>
-            <div id="answers-container-1"></div>
-            <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
-        </div>
-    </section>
-</aside><!-- End: iframe -->
+</aside> -->
+<!-- End: iframe -->
     </section><!-- End: game -->
     <section id="chatbot_instance">
         <div class="chatBotAbstraction">
