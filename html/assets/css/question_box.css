@@ -24,18 +24,6 @@
   border-radius: 5px;
 }
 
-@media (max-width: 699px) {
-  .quizz_container button {
-    width: 80%;
-  }
-}
-
-@media (min-width: 700px) {
-  .quizz_container button {
-    width: 164px;
-  }
-}
-
 .quizz_container button:hover {
   background-color: #ddd;
 }
@@ -62,7 +50,6 @@
   padding-left: 0px;
   padding-right: 5px;
   gap: 5px;
-  width: 446px;
 }
 
 .quizz_container div div input {
@@ -79,5 +66,29 @@ input.answer {
   background-color: #adb5bd;
   color: black;
   border-color: transparent;
+}
+
+@media (max-width: 699px) {
+  .quizz_container button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 699px) {
+  .quizz_container div div {
+    width: 80%;
+  }
+}
+
+@media (min-width: 700px) {
+  .quizz_container button {
+    width: 164px;
+  }
+}
+
+@media (min-width: 700px) {
+  .quizz_container div div {
+    width: 446px;
+  }
 }
 

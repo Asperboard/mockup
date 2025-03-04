@@ -133,6 +133,7 @@
 </head>
 
 <body>
+    <!-- Start: header -->
     <section class="header">
         <aside class="widget_button"><img src="../../../assets/img/AB-logo.png" width="45" height="45"></aside>
         <div class="my-btn-group my-btn-group-toggle" data-bs-toggle="buttons"><label class="my-btn" onclick="change_toggle_option(&#39;/routes/pro/creation&#39;)"> creation </label><label class="my-btn active"> suivi </label></div><i class="far fa-trash-alt" style="display:none;"></i>
@@ -149,11 +150,12 @@
                     </svg>Auto</a></div>
         </div><select id="fontSelector" onchange="updateFont(this);"></select>
         <aside><button class="button_desing" type="button" onclick="logout_pro();">Déconnexion</button></aside>
-    </section><!-- Start: forum -->
+    </section><!-- End: header -->
+    <!-- Start: forum -->
     <section class="forumFrame">
         <aside class="aside-left">
             <nav class="navbar_search">
-                <form class="search-form"><input type="text" class="search-input" placeholder="Search..."><button class="search-button" type="submit">🔍</button></form><button class="btn btn-primary" type="button" style="background-color: steelblue;">Contacter patient</button>
+                <form class="search-form"><input type="text" class="search-input" placeholder="Rechercher.."><button class="search-button" type="submit">🔍</button></form><button class="btn btn-primary" type="button" style="background-color: steelblue;">Contacter patient</button>
             </nav>
             <ul class="buttonList">
                 <li class="active"><button class="active">Lucas Houilles</button></li>
