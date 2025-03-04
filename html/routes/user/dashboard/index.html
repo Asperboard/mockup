@@ -147,7 +147,16 @@
         <aside><button class="button_desing" type="button" onclick="logout();">Déconnexion</button></aside>
     </section>
     <section class="search_container">
-        <p>Widget:</p><input type="search"><button class="button_desing" type="button">Ajouter</button>
+        <div class="input-group"><select class="form-select form-select">
+                <option value="">Choisissez une activité...</option>
+                <option value="Option 1">Quizz sur les emotions</option>
+                <option value="Option 2">Test d'interraction sociale</option>
+                <option value="Option 3">etc...</option>
+            </select></div><script type="text/JavaScript">
+    document.getElementById("myInput").addEventListener("input", function() {
+  this.setAttribute("list", "options");
+});
+</script><button class="button_desing" type="button">Ajouter</button>
     </section><!-- Start: createdGames -->
     <section>
         <aside class="widget">
