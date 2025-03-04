@@ -6,8 +6,6 @@
 .forumFrame {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 500px;
   border: 1px solid black;
 }
 
@@ -33,13 +31,76 @@
   overflow-y: auto !important;
 }
 
-section.userInput {
+.userInput {
   gap: 10px;
   display: flex;
+  padding-top: 10px;
+  padding-left: 5px;
 }
 
 .message_button {
   border: 1px transparent;
   border-radius: 30px;
+}
+
+@media (max-width: 699px) {
+  .forumFrame {
+    width: 100%;
+    height: 100dvh;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 699px) {
+  .aside-right {
+    height: 30%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 699px) {
+  .aside-left {
+    height: 40%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 699px) {
+  .chat {
+    height: 88%;
+  }
+}
+
+@media (max-width: 699px) {
+  .search-form {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 699px) {
+  .search-input {
+    width: 122px;
+  }
+}
+
+@media (min-width: 700px) {
+  .forumFrame {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media (min-width: 700px) {
+  .search-form {
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 700px) {
+  .search-input {
+    width: 122px;
+  }
 }
 

@@ -22,7 +22,6 @@
 .widget {
   display: flex;
   flex-direction: column;
-  width: 40%;
   height: 50%;
   border: black 1px groove;
 }
@@ -86,5 +85,17 @@
   height: 2.5em;
   padding: 5px;
   text-align: left;
+}
+
+@media (max-width: 699px) {
+  .widget {
+    width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  .widget {
+    width: 40%;
+  }
 }
 
