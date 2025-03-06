@@ -3,6 +3,13 @@
 ** File description:
 ** bubbles.css */
 
+:root {
+  --message-receiver-background: cadetblue;
+  --message-receiver-color: white;
+  --message-sender-background: steelblue;
+  --message-sender-color: black;
+}
+
 /* Taken from: https://codepen.io/Founts/details/AJyVOr */
 
 /* container */
@@ -265,13 +272,6 @@
   -webkit-margin-after: 0em;
 }
 
-:root {
-  --message-receiver-background: #44c2eb;
-  --message-receiver-color: white;
-  --message-sender-background: lightgreen;
-  --message-sender-color: black;
-}
-
 .receiver {
   background-color: var(--message-receiver-background);
   color: var(--message-receiver-color);
@@ -318,5 +318,10 @@
 .receiver-text {
   margin-bottom: 10px;
   justify-content: left;
+}
+
+.message_button {
+  border: 1px transparent;
+  border-radius: 30px;
 }
 

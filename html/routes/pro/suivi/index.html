@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Asperboard</title>
     <meta name="theme-color" content="#86c8ed">
-    <link rel="canonical" href="https://asperboard.pingpal.news/routes/pro/suivi/">
-    <meta property="og:url" content="https://asperboard.pingpal.news/routes/pro/suivi/">
+    <link rel="canonical" href="https://asperboard.pingpal.news/html/routes/pro/suivi/">
+    <meta property="og:url" content="https://asperboard.pingpal.news/html/routes/pro/suivi/">
     <meta name="twitter:description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
     <meta name="author" content="Henry LETELLIER, Flavien Maillard">
     <meta name="twitter:title" content="Asperboard">
     <meta name="description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
-    <meta property="og:image" content="https://asperboard.pingpal.news/assets/img/AB-logo.png">
+    <meta property="og:image" content="https://asperboard.pingpal.news/html/assets/img/AB-logo.png">
     <script>
         (function() {
 
@@ -126,18 +126,17 @@
     <link rel="stylesheet" href="../../../assets/css/github.css">
     <link rel="stylesheet" href="../../../assets/css/header_button.css">
     <link rel="stylesheet" href="../../../assets/css/Login-Form-Basic-icons.css">
+    <link rel="stylesheet" href="../../../assets/css/question_box.css">
     <link rel="stylesheet" href="../../../assets/css/Toggle-Switches.css">
     <link rel="stylesheet" href="../../../assets/css/widget.css">
     <link rel="stylesheet" href="../../../assets/css/xToggle.css">
 </head>
 
 <body>
+    <!-- Start: header -->
     <section class="header">
         <aside class="widget_button"><img src="../../../assets/img/AB-logo.png" width="45" height="45"></aside>
-        <div class="my-btn-group my-btn-group-toggle" data-bs-toggle="buttons"><label class="my-btn" onclick="change_toggle_option(&#39;/routes/pro/creation&#39;)"> creation </label><label class="my-btn" onclick="change_toggle_option(&#39;/routes/pro/discuter&#39;)"> discuter </label><label class="my-btn active"> suivi </label></div><i class="far fa-trash-alt" style="display:none;"></i>
-        <aside>
-            <p class="center_text">Welcome&nbsp;<span id="username_field" class="usrname">Text</span></p>
-        </aside>
+        <div class="my-btn-group my-btn-group-toggle" data-bs-toggle="buttons"><label class="my-btn" onclick="change_toggle_option(&#39;/routes/pro/creation&#39;)"> creation </label><label class="my-btn active"> suivi </label></div><i class="far fa-trash-alt" style="display:none;"></i>
         <div class="theme-switcher dropdown" id="themeToggler"><button class="btn btn-link dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="color: var(--bs-body-color);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
                     <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
                 </svg></button>
@@ -151,11 +150,12 @@
                     </svg>Auto</a></div>
         </div><select id="fontSelector" onchange="updateFont(this);"></select>
         <aside><button class="button_desing" type="button" onclick="logout_pro();">Déconnexion</button></aside>
-    </section>
+    </section><!-- End: header -->
+    <!-- Start: forum -->
     <section class="forumFrame">
         <aside class="aside-left">
             <nav class="navbar_search">
-                <form class="search-form"><input type="text" class="search-input" placeholder="Search..."><button class="search-button" type="submit">🔍</button></form><button class="btn btn-primary" type="button">Contacter patient</button>
+                <form class="search-form"><input type="text" class="search-input" placeholder="Rechercher.."><button class="button-primary message_button" type="button" style="background-color:steelblue;">Contacter patient</button></form>
             </nav>
             <ul class="buttonList">
                 <li class="active"><button class="active">Lucas Houilles</button></li>
@@ -170,10 +170,18 @@
         </aside>
         <aside class="aside-right">
             <section id="chat-info" class="chat"></section>
-            <section class="userInput"><input type="text" placeholder="Type your message here"><button>Send</button></section>
+            <section class="userInput"><input type="text" class="question_quizz" placeholder="Entrez votre message ici"><button class="message_button">Envoyer</button></section>
         </aside>
+    </section><!-- End: forum -->
+    <section id="chatbot_instance">
+        <div class="chatBotAbstraction">
+            <div class="chatbotButton"><button><img src="../../../assets/img/AB-logo.png" width="50" height="49"></button></div>
+        </div>
     </section>
-    <section id="cookie_banner"></section><i class="fas fa-paper-plane"></i>
+    <section id="banners" class="banner-container">
+        <article id="cookie_banner"></article>
+        <article id="feedback_banner"></article>
+    </section><i class="fas fa-paper-plane"></i>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../assets/js/modules/cookie_manager.mjs" type="module"></script>
     <script src="../../../assets/js/modules/indexeddb_manager.mjs" type="module"></script>
@@ -188,6 +196,7 @@
     <script src="../../../assets/js/modules/constants.mjs" type="module"></script>
     <script src="../../../assets/js/theme_toggler.js"></script>
     <script src="../../../assets/js/banners/cookies.js"></script>
+    <script src="../../../assets/js/banners/feedback.js"></script>
     <script src="../../../assets/js/change_toggle_option.js"></script>
     <script src="../../../assets/js/chatbot/chatbot.js"></script>
     <script src="../../../assets/js/dashboard/get_weather.js"></script>

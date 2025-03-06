@@ -1,0 +1,10 @@
+pallet:
+cadetblue
+darkgray
+rgba(0, 173, 255, 0.42)
+lightblue
+lemonchiffon
+steelblue
+teal
+thistle
+gainsboro

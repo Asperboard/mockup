@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Asperboard</title>
     <meta name="theme-color" content="#86c8ed">
-    <link rel="canonical" href="https://asperboard.pingpal.news/routes/pro/creation/">
-    <meta property="og:url" content="https://asperboard.pingpal.news/routes/pro/creation/">
+    <link rel="canonical" href="https://asperboard.pingpal.news/html/routes/pro/creation/">
+    <meta property="og:url" content="https://asperboard.pingpal.news/html/routes/pro/creation/">
     <meta name="twitter:description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
     <meta name="author" content="Henry LETELLIER, Flavien Maillard">
     <meta name="twitter:title" content="Asperboard">
     <meta name="description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
-    <meta property="og:image" content="https://asperboard.pingpal.news/assets/img/AB-logo.png">
+    <meta property="og:image" content="https://asperboard.pingpal.news/html/assets/img/AB-logo.png">
     <script>
         (function() {
 
@@ -133,10 +133,7 @@
     <!-- Start: Header -->
     <section class="header">
         <aside class="widget_button"><img src="../../../assets/img/AB-logo.png" width="45" height="45"></aside>
-        <div class="my-btn-group my-btn-group-toggle" data-bs-toggle="buttons"><label class="my-btn active"> creation </label><label class="my-btn" onclick="change_toggle_option(&#39;/routes/pro/discuter&#39;)"> discuter </label><label class="my-btn" onclick="change_toggle_option(&#39;/routes/pro/suivi&#39;)"> suivi </label></div><i class="far fa-trash-alt" style="display:none;"></i>
-        <aside>
-            <p class="center_text">Welcome&nbsp;<span id="username_field" class="usrname">Text</span></p>
-        </aside>
+        <div class="my-btn-group my-btn-group-toggle" data-bs-toggle="buttons"><label class="my-btn active"> creation </label><label class="my-btn" onclick="change_toggle_option(&#39;/routes/pro/suivi&#39;)"> suivi </label></div><i class="far fa-trash-alt" style="display:none;"></i>
         <div class="theme-switcher dropdown" id="themeToggler"><button class="btn btn-link dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="color: var(--bs-body-color);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
                     <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
                 </svg></button>
@@ -151,45 +148,194 @@
         </div><select id="fontSelector" onchange="updateFont(this);"></select>
         <aside><button class="button_desing" type="button" onclick="logout_pro();">Déconnexion</button></aside>
     </section><!-- End: Header -->
-    <p style="background-color:yellow;color:black;">Ceci est un site de <strong>démonstration</strong>, vos données personnelles ne seront enregistré que sur votre ordinateur.<br>Le concepteur fourni est à titre d'exemple, ce n'est qu'un <strong>apperçu</strong> d'une des fonctionnalités de cette page.</p><!-- Start: controls -->
+    <p style="background-color: rgba(255,255,0,0.43);color: black;">Ceci est un site de <strong>démonstration</strong>, vos données personnelles ne seront enregistré que sur votre ordinateur.<br>Le concepteur fourni est à titre d'exemple, ce n'est qu'un <strong>apperçu</strong> d'une des fonctionnalités de cette page.</p><!-- Start: controls -->
     <section>
-        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Nouvel élément</button>
+        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="background-color: steelblue;">Nouvelle activité</button>
             <div class="dropdown-menu"><a class="dropdown-item" href="#">Quizz</a><a class="dropdown-item" href="#">Texte/Article</a><a class="dropdown-item" href="#">Question/Réponse</a><a class="dropdown-item" href="#">Vidéo</a><a class="dropdown-item" href="#">Lien</a><a class="dropdown-item" href="#">Code HTML intégré</a></div>
         </div>
     </section><!-- End: controls -->
-    <!-- Start: createdGames -->
-    <section>
-        <aside class="widget">
-            <section style="display:flex;flex-direction:row;justify-content: space-between;">
-                <div style="display:flex;flex-direction:row;">
-                    <p>Publique: </p><!-- Start: xToggle -->
-                    <div class="border rounded-pill border-0 d-flex xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false" onclick="onToggle(this)"><i class="fas fa-circle" style="/*float: left;*/height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div><!-- End: xToggle -->
-                </div><button class="button_desing" type="button" onclick="this.closest(&quot;aside&quot;).style.display = &quot;none&quot;;"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
-            </section>
-            <section class="quizz_container">
-                <h1>Créateur de Jeu de Quiz</h1>
-                <div id="editor"><button id="start-over-btn">Recommencer</button>
-                    <h2>Créez Vos Questions</h2><label>Question :</label><input type="text" id="question-input" placeholder="Entrez la question..."><label>Réponses :</label>
-                    <div id="answers-inputs"><input type="text" class="answer" placeholder="Réponse 1"><input type="text" class="answer" placeholder="Réponse 2"><input type="text" class="answer" placeholder="Réponse 3"><input type="text" class="answer" placeholder="Réponse 4"></div><label>Réponse Correcte (1-4) :</label><input type="number" id="correct-answer" max="4" min="1" value="1"><button onclick="addQuestion()">Ajouter la question</button>
-                    <h3>Liste des Questions</h3>
-                    <ul id="questions-list"></ul><button onclick="startGame()">Commencer le Jeu</button>
-                </div>
-                <div id="game" style="display:none;"><button id="play-again-btn" style="display:none;">Rejouer</button><button id="edit-set-btn" style="display:none;">Modifier le Set</button>
-                    <h2>Jouez à Votre Quiz</h2>
-                    <p id="question-text"></p>
-                    <div id="answers-container"></div>
-                    <p id="feedback"></p><button id="next-btn">Suivant</button>
-                </div>
-            </section>
-            <section></section>
-        </aside>
-    </section><!-- End: createdGames -->
+    <!-- Start: game -->
+    <section class="creator_widget_container">
+        <!-- Start: demo_quizz --><!-- <aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Créateur de quiz</h1>
+        <p>Titre: <input id="quiz-title" type="text" placeholder="Nom du quiz" /></p>
+        <p>Description:</p>
+        <input id="quiz-description" type="textarea" placeholder="Description du quiz" />
+        <button id="save-quiz-btn">Sauvegarder</button>
+        <div id="editor">
+            <h2>Créez vos questions</h2>
+            <label>Question :</label>
+            <input id="question-input" class="question_quizz" type="text" placeholder="Entrez la question..." />
+            <br />
+            <label>Réponses :</label>
+            <div id="answers-inputs">
+                <input class="answer" type="text" placeholder="Réponse 1" />
+                <input class="answer" type="text" placeholder="Réponse 2" />
+                <input class="answer" type="text" placeholder="Réponse 3" />
+                <input class="answer" type="text" placeholder="Réponse 4" />
+            </div>
+            <br />
+            <label>Réponse correcte (1-4) :</label>
+            <input id="correct-answer" class="question_quizz" type="number" max="4" min="1" value="1" />
+            <button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list"></ul><button>Commencer le jeu</button><button id="start-over-btn">Recommencer</button>
+        </div>
+        <div id="game" style="display: none;"><button id="play-again-btn" style="display: none;">Rejouer</button><button id="edit-set-btn" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text"></p>
+            <div id="answers-container"></div>
+            <p id="feedback"></p><button id="next-btn">Suivant</button>
+        </div>
+    </section>
+</aside> -->
+<!-- End: demo_quizz -->
+        <!-- Start: text_article --><aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Créateur de quiz</h1>
+        <div id="editor-1">
+            <h2>Créez vos questions</h2><label>Question :</label><input id="question-input-1" class="question_quizz" type="text" placeholder="Entrez la question..." /><br /><label>Réponses :</label>
+            <div id="answers-inputs-1"><input class="answer" type="text" placeholder="Réponse 1" /><input class="answer" type="text" placeholder="Réponse 2" /><input class="answer" type="text" placeholder="Réponse 3" /><input class="answer" type="text" placeholder="Réponse 4" /></div><br /><label>Réponse correcte (1-4) :</label><input id="correct-answer-1" class="question_quizz" type="number" max="4" min="1" value="1" /><button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list-1"></ul><button>Commencer le jeu</button><button id="start-over-btn-1">Recommencer</button>
+        </div>
+        <div id="game-1" style="display: none;"><button id="play-again-btn-1" style="display: none;">Rejouer</button><button id="edit-set-btn-1" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text-1"></p>
+            <div id="answers-container-1"></div>
+            <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
+        </div>
+    </section>
+</aside><!-- End: text_article -->
+        <!-- Start: q&a --><!-- <aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Q&A</h1>
+        <div id="editor-1">
+            <h2>Créez vos questions</h2>
+            <label>Question :</label>
+            <input id="question-input-1" class="question_quizz" type="text" placeholder="Entrez la question..." />
+            <br />
+            <label>Réponses :</label>
+            <div id="answers-inputs-1">
+                <input class="answer" type="text" placeholder="Réponse" />
+            </div>
+            <br />
+            <label>Réponse correcte (1-4) :</label>
+            <input id="correct-answer-1" class="question_quizz" type="number" max="4" min="1" value="1" />
+            <button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list-1"></ul><button>Commencer le jeu</button><button id="start-over-btn-1">Recommencer</button>
+        </div>
+        <div id="game-1" style="display: none;"><button id="play-again-btn-1" style="display: none;">Rejouer</button><button id="edit-set-btn-1" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text-1"></p>
+            <div id="answers-container-1"></div>
+            <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
+        </div>
+    </section>
+</aside> -->
+<!-- End: q&a -->
+        <!-- Start: video --><!-- <aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Créateur de quiz</h1>
+        <div id="editor-1">
+            <h2>Créez vos questions</h2><label>Question :</label><input id="question-input-1" class="question_quizz" type="text" placeholder="Entrez la question..." /><br /><label>Réponses :</label>
+            <div id="answers-inputs-1"><input class="answer" type="text" placeholder="Réponse 1" /><input class="answer" type="text" placeholder="Réponse 2" /><input class="answer" type="text" placeholder="Réponse 3" /><input class="answer" type="text" placeholder="Réponse 4" /></div><br /><label>Réponse correcte (1-4) :</label><input id="correct-answer-1" class="question_quizz" type="number" max="4" min="1" value="1" /><button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list-1"></ul><button>Commencer le jeu</button><button id="start-over-btn-1">Recommencer</button>
+        </div>
+        <div id="game-1" style="display: none;"><button id="play-again-btn-1" style="display: none;">Rejouer</button><button id="edit-set-btn-1" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text-1"></p>
+            <div id="answers-container-1"></div>
+            <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
+        </div>
+    </section>
+</aside> -->
+<!-- End: video -->
+        <!-- Start: link --><!-- <aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Créateur de quiz</h1>
+        <div id="editor-1">
+            <h2>Créez vos questions</h2><label>Question :</label><input id="question-input-1" class="question_quizz" type="text" placeholder="Entrez la question..." /><br /><label>Réponses :</label>
+            <div id="answers-inputs-1"><input class="answer" type="text" placeholder="Réponse 1" /><input class="answer" type="text" placeholder="Réponse 2" /><input class="answer" type="text" placeholder="Réponse 3" /><input class="answer" type="text" placeholder="Réponse 4" /></div><br /><label>Réponse correcte (1-4) :</label><input id="correct-answer-1" class="question_quizz" type="number" max="4" min="1" value="1" /><button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list-1"></ul><button>Commencer le jeu</button><button id="start-over-btn-1">Recommencer</button>
+        </div>
+        <div id="game-1" style="display: none;"><button id="play-again-btn-1" style="display: none;">Rejouer</button><button id="edit-set-btn-1" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text-1"></p>
+            <div id="answers-container-1"></div>
+            <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
+        </div>
+    </section>
+</aside> -->
+<!-- End: link -->
+        <!-- Start: iframe --><!-- <aside class="widget">
+    <section style="display: flex;flex-direction: row;justify-content: space-between;">
+        <div style="display: flex;flex-direction: row;">
+            <p>Publique: </p>
+            <div class="border-0 d-flex border rounded-pill xToggle" style="width: 32px;height: 18px;cursor: pointer;" data-checked="false"><i class="fas fa-circle" style="height: 100%;padding-top: 1px;padding-left: 2px;padding-right: 2px;color: white;padding-bottom: 5px;"></i></div>
+        </div><button class="button_desing" type="button"><i class="fas fa-trash-alt" style="font-size: 13px;"></i></button>
+    </section>
+    <section class="quizz_container">
+        <h1>Créateur de quiz</h1>
+        <div id="editor-1">
+            <h2>Créez vos questions</h2><label>Question :</label><input id="question-input-1" class="question_quizz" type="text" placeholder="Entrez la question..." /><br /><label>Réponses :</label>
+            <div id="answers-inputs-1"><input class="answer" type="text" placeholder="Réponse 1" /><input class="answer" type="text" placeholder="Réponse 2" /><input class="answer" type="text" placeholder="Réponse 3" /><input class="answer" type="text" placeholder="Réponse 4" /></div><br /><label>Réponse correcte (1-4) :</label><input id="correct-answer-1" class="question_quizz" type="number" max="4" min="1" value="1" /><button>Ajouter la question</button>
+            <h3>Liste des questions</h3>
+            <ul id="questions-list-1"></ul><button>Commencer le jeu</button><button id="start-over-btn-1">Recommencer</button>
+        </div>
+        <div id="game-1" style="display: none;"><button id="play-again-btn-1" style="display: none;">Rejouer</button><button id="edit-set-btn-1" style="display: none;">Modifier le set</button>
+            <h2>Jouez à Votre Quiz</h2>
+            <p id="question-text-1"></p>
+            <div id="answers-container-1"></div>
+            <p id="feedback-1"></p><button id="next-btn-1">Suivant</button>
+        </div>
+    </section>
+</aside> -->
+<!-- End: iframe -->
+    </section><!-- End: game -->
     <section id="chatbot_instance">
         <div class="chatBotAbstraction">
             <div class="chatbotButton"><button><img src="../../../assets/img/AB-logo.png" width="50" height="49"></button></div>
         </div>
     </section>
-    <section id="cookie_banner"></section><i class="fas fa-paper-plane"></i>
+    <section id="banners" class="banner-container">
+        <article id="cookie_banner"></article>
+        <article id="feedback_banner"></article>
+    </section><i class="fas fa-paper-plane"></i>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../assets/js/modules/cookie_manager.mjs" type="module"></script>
     <script src="../../../assets/js/modules/indexeddb_manager.mjs" type="module"></script>
@@ -204,6 +350,7 @@
     <script src="../../../assets/js/modules/constants.mjs" type="module"></script>
     <script src="../../../assets/js/theme_toggler.js"></script>
     <script src="../../../assets/js/banners/cookies.js"></script>
+    <script src="../../../assets/js/banners/feedback.js"></script>
     <script src="../../../assets/js/change_toggle_option.js"></script>
     <script src="../../../assets/js/chatbot/chatbot.js"></script>
     <script src="../../../assets/js/dashboard/get_weather.js"></script>

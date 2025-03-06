@@ -3,29 +3,64 @@
 ** File description:
 ** banner.css */
 
-.cookie-banner {
+:root {
+  --cookie-background-button-colour: steelblue;
+  --cookie-button-colour: white;
+}
+
+/* The section in charge of containing the different banners */
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  margin: 0 !important;
-  text-align: center;
-  padding: 10px;
   z-index: 1000;
-  background-color: var(--bs-body-bg);
 }
 
-.cookie-banner button {
-  background-color: #4CAF50;
-  color: white;
+.cookie-banner {
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*margin: 0 !important;*/
+  /*text-align: center;*/
+  /*padding: 10px;*/
+  /*z-index: 1000;*/
+  /*background-color: var(--bs-body-bg);*/
+  text-align: center;
+  padding: 10px;
+  background-color: var(--bs-body-bg);
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.cookie-banner p {
+  display: inline;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.cookie-banner button, .cookie-banner button[data-theme="cross"] {
+  background-color: var(--cookie-background-button-colour);
+  color: var(--cookie-button-colour);
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.cookie-banner button:hover {
-  background-color: invert(#4CAF50);
+.cookie-banner button:hover, .cookie-banner button[data-theme="cross"]:hover {
+  background-color: invert(var(--cookie-background-button-colour));
+  color: invert(var(--cookie-button-colour));
+}
+
+.cookie-banner button[data-theme="cross"] {
+  background-color: transparent;
+  color: var(--bs-body-color);
 }
 
 .style_popup_banner_container {

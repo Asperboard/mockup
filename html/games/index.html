@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Asperboard</title>
     <meta name="theme-color" content="#86c8ed">
-    <link rel="canonical" href="https://asperboard.pingpal.news/games/">
-    <meta property="og:url" content="https://asperboard.pingpal.news/games/">
+    <link rel="canonical" href="https://asperboard.pingpal.news/html/games/">
+    <meta property="og:url" content="https://asperboard.pingpal.news/html/games/">
     <meta name="twitter:description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
     <meta name="author" content="Henry LETELLIER, Flavien Maillard">
     <meta name="twitter:title" content="Asperboard">
     <meta name="description" content="This is the mockup of the project Asperboard. So far it contains the connection page, a mockup for the asperboard, discuss, follow up, logout. This mockup is front-end only, any data is only stored locally.">
-    <meta property="og:image" content="https://asperboard.pingpal.news/assets/img/AB-logo.png">
+    <meta property="og:image" content="https://asperboard.pingpal.news/html/assets/img/AB-logo.png">
     <link rel="icon" type="image/png" sizes="1270x1221" href="../assets/img/AB-logo.png">
     <link rel="icon" type="image/png" sizes="1270x1221" href="../assets/img/AB-logo.png" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" sizes="1270x1221" href="../assets/img/AB-logo.png">
@@ -63,27 +63,37 @@
         margin: 20px auto;
         background: white;
         padding: 20px;
+        background-color: gainsboro;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 
     button {
         display: block;
-        width: 100%;
+        width: 80%;
         margin: 10px 0;
+        margin-left: 38px;
         padding: 10px;
         font-size: 16px;
         cursor: pointer;
         border: none;
+        background-color: teal;
+        color: white;
         border-radius: 5px;
     }
 
+    div#game {
+        margin-top: 30px;
+    }
+
     button:hover {
+        color: teal;
+        font-weight: bold;
         background-color: #ddd;
     }
 
     .correct {
-        background-color: #4CAF50 !important;
+        background-color: #011635 !important;
         color: white;
     }
 
@@ -97,17 +107,24 @@
         margin: 5px 0;
         padding: 5px;
     }
+
+    .button_next {
+        background-color: dimgray;
+        width: 50%;
+        padding: 5px 0;
+        margin-left: 144px;
+    }
 </style>
 <div class="container">
-    <h1>Quiz des Émotions</h1>
+    <h1 style="color:teal;font-weight:bold;">Quiz des émotions</h1>
 
     <!-- Quiz Section -->
     <div id="game">
-        <h2>Quelle est cette émotion ?</h2>
+        <!-- <h4>Quelle est cette émotion ?</h4> -->
         <p id="question-text"></p>
         <div id="answers-container"></div>
         <p id="feedback"></p>
-        <button id="next-btn">Suivant</button>
+        <button id="next-btn" class="button_next">Suivant ></button>
         <button id="play-again-btn" style="display: none;">Rejouer</button>
     </div>
 </div>
@@ -129,9 +146,11 @@ const playAgainButton = document.getElementById("play-again-btn");
 
 
 // 🆕 Score and Progress Elements
-const scoreDisplay = document.createElement("p");
-const progressDisplay = document.createElement("p");
+const scoreDisplay = document.createElement("span");
+const breakPoint = document.createElement("br");
+const progressDisplay = document.createElement("span");
 document.getElementById("game").insertBefore(scoreDisplay, nextButton);
+document.getElementById("game").insertBefore(breakPoint, nextButton);
 document.getElementById("game").insertBefore(progressDisplay, nextButton);
 
 
@@ -201,11 +220,11 @@ function checkAnswer(selectedIndex) {
     const buttons = answersContainer.getElementsByTagName("button");
 
     if (selectedIndex === correctIndex) {
-        feedback.textContent = "✅ Correcte !";
+        feedback.textContent = " Correcte !";
         buttons[selectedIndex].classList.add("correct");
         score++; // ✅ Increase score if correct
     } else {
-        feedback.textContent = "❌ Mauvaise réponse !";
+        feedback.textContent = " Mauvaise réponse !";
         buttons[selectedIndex].classList.add("wrong");
         buttons[correctIndex].classList.add("correct");
     }
@@ -242,12 +261,12 @@ function playAgain() {
 
 // 🎯 Function: Update Score Display
 function updateScore() {
-    scoreDisplay.textContent = `Score : ${score} / ${questions.length}`;
+    scoreDisplay.textContent = `Score : ${score}/${questions.length}`;
 }
 
 // 🎯 Function: Update Progress Display
 function updateProgress() {
-    progressDisplay.textContent = `Question : ${currentQuestionIndex + 1} / ${questions.length}`;
+    progressDisplay.textContent = `Question : ${currentQuestionIndex + 1}/${questions.length}`;
 }
 
 // 🎯 Attach Event Listeners
@@ -273,6 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <script src="../assets/js/modules/constants.mjs" type="module"></script>
     <script src="../assets/js/theme_toggler.js"></script>
     <script src="../assets/js/banners/cookies.js"></script>
+    <script src="../assets/js/banners/feedback.js"></script>
     <script src="../assets/js/change_toggle_option.js"></script>
     <script src="../assets/js/chatbot/chatbot.js"></script>
     <script src="../assets/js/github_normalizer.js"></script>

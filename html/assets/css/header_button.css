@@ -6,7 +6,8 @@
 }
 
 .my-btn-group-toggle .my-btn.active {
-  background-color: #4CAF50;
-  color: white;
+  /*background-color: #4CAF50;*/
+  border-bottom: 3px steelblue solid;
+  /*color: white;*/
 }
 

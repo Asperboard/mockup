@@ -30,7 +30,7 @@
 /* Style the button when it is active */
 
 .buttonList button.active, .buttonList li.active {
-  background-color: #007bff;
+  background-color: steelblue;
   color: white;
   border-radius: 0px;
 }
