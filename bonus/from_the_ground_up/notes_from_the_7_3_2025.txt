@@ -1,9 +1,55 @@
 Réponse:
 Cher Jury,
-Nous vous remersions de votre réponse qui nous as beaucoup aidé.
-Grâce à votre réponse, nous avons pût nous recentrer sur le coeur du projet, le manque de ressources sur internet (surtout en français) expliquant comment gérer les interractions sociales en tant que TSA.
+Nous vous remercions de votre réponse qui nous as beaucoup aidé.
+Grâce à votre réponse, nous allons nous recentrer sur le coeur du projet, le manque de ressources sur internet (surtout en français) expliquant comment gérer les interractions sociales en tant que TSA.
+Nous souhaitons nous concentrer sur l'accompagnement éducatif, c'est-à-dire que la plupart des gens ne comprennent pas, voir ne connaissent pas les TSA, les responsables de l'éducation (parents, professeurs, etc...) de ces enfants ne savent pas comment agir, et peuvent parfois agir violemment en réponse.
+Les comprendre permettrait donc de régler ce problème, ainsi que de rassurer les parents et mieux accompagner les enfants.
+
+Exemple : Attention, les enfants à TSA sont parfois trop concentrés sur une chose, et en oublient parfois de dormir, voir ne considère même pas dormir comme utile par rapport à leur centre d'intérêt actuel.
+
+Un exemple de jeux à numériser: https://unjeudansmaclasse.com/IMG/pdf/feelings_jeu_a_imprimer_demo_covid1.pdf
+
+Chaque page aura plusieurs modes pour être adaptés aux plus de TSA possibles.
+
+Nous vous souhaitons une bonne journée
+
+Respectueusement
+
+Henry Letellier
+Flavien Maillard
+
+English version:
+P.s. This is comming from my mother's point of view. Initially the main focus of the website is intended to be tools to help Aspergers learn social ability. Given that this is one of the main difficulties that they are faced with as they navigate society and have enormous difficulty reading social cues and reading between the lines. From my own experience (Henry Letellier) it was extremely difficult to find a group which taught social skills through role play. The initial heart of the website is one that will provide interactive tools such as images, animation and cartoons that show social settings and provide solutions of how to behave. From simple things like answering the phone to more complex situations as social conversations. Aspergers are know for their monologues. This lack of social ability is a major handycap for them and follows them all their life. They are often misunderstood and regularly get the rules of society wrong. There is gaping hole in the market and the few professionals that we mentioned the idea thought it had huge potential and a demand for it.
+
+Initially the website would focus on Aspergers and their families, but the potential there to extend to teachers, schools, psychologists, speech therapist etc. Asperger syndrome is a handy cap that is not seen physically but they are so often rejected by society, starting with being bullied at school through not being about to work in a team in the workplace. It’s a shame as it should not be a handy cap if they are taught the right rules and have often contributed greatly to society.
+
+Regarding the survey we were asked to do from thursday to sunday, reaching 50 people's opinion, is harder than with a typical project because it concerns psychologists opinion and they don't always have time to answer. 
+
+French version:
+P.s:
+ Ceci est le point de vue de ma mère.
+ Au début, l'objectif principal du site Web est d'offrir des outils pour aider les TSA à acquérir des aptitudes sociales.
+ C'est en effet l'une des difficultés principales auxquelles ils sont confrontés lorsqu'ils naviguent dans la société et qu'ils éprouvent d'énormes difficultés à lire les signaux sociaux et à lire entre les lignes.
+ D'après ma propre expérience (Henry Letellier), il a été extrêmement difficile de trouver un groupe qui enseignait les aptitudes sociales par le biais de jeux de rôle.
+ Le cœur initial du site web est de fournir des outils interactifs tels que des images, des animations et des dessins animés qui montrent des situations sociales et fournissent des solutions sur la manière de se comporter.
+ Cela va de choses simples comme répondre au téléphone à des situations plus complexes comme les conversations sociales.
+ Les Asperger sont connus pour leurs monologues.
+ Ce manque de capacité sociale est un handicap majeur pour eux et les suit tout au long de leur vie.
+ Ils sont souvent incompris et se trompent régulièrement dans les règles de la société.
+ Il y a un trou béant sur le marché et les quelques professionnels à qui nous avons parlé de l'idée ont pensé qu'elle avait un énorme potentiel et qu'il y avait une demande.
+
+ Dans un premier temps, le site se concentrera sur les personnes atteintes de TSA et leurs familles, mais il est possible de l'étendre aux enseignants, aux écoles, aux psychologues, aux orthophonistes, etc.
+ Le TSA est une casquette pratique qui ne se voit pas physiquement, mais ces personnes sont si souvent rejetées par la société, depuis les brimades à l'école jusqu'à l'incapacité de travailler en équipe sur le lieu de travail.
+ C'est une honte, car ce ne devrait pas être une casquette pratique si on leur enseigne les bonnes règles et s'ils ont souvent apporté une grande contribution à la société.
+
+ En ce qui concerne l'enquête que l'on nous a demandé de réaliser du jeudi au dimanche, atteindre l'opinion de 50 personnes est plus difficile qu'avec un projet typique car il s'agit de l'opinion de psychologues et ils n'ont pas toujours le temps de répondre.
 
 
+Il faut :
+- des activités pour avoir un premier diagnostic
+- des activités pour apprendre ce qu'est un TSA
+- des activités pour apprendre comment accompagner un enfant à TSA
+  - toutes les différentes interractions sociales
 
 notes:
 
@@ -40,6 +86,12 @@ Plusieurs mode d'affichage:
 4: Création d'une page "dump" dans lequel l'utilisateur peur rechercher un widget spécifique parmis la masse
 
 
-Pour le tuto sur comment aller de on as un doute à on a un diagnostique posé:
+Pour le tuto sur comment aller de: "on a un doute" à "on a un diagnostique posé":
 utiliser l'exemple de l'a tour, l'utilisateur commence en haut de la tour et au fur et a mesure que les démarches progressent, on descends des étages de la tour.
+
+
+
+Legal:
+Comment insérer la rgpd: https://www.cnil.fr/fr/rgpd-en-pratique-communiquer-en-ligne
+
 
