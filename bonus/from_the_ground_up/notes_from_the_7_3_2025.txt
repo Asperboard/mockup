@@ -95,3 +95,25 @@ Legal:
 Comment insérer la rgpd: https://www.cnil.fr/fr/rgpd-en-pratique-communiquer-en-ligne
 
 
+Accessibilité:
+Changement du type police pour les personnes qui ont du mal à lire
+Changement de la taille de la police
+Ajout d'un filtre de couleur pour les daltoniens
+Utiliser les aria-label pour aider les lecteurs d'écran à naviguer le site
+
+Vérification pour la lisibilité des site pour les daltoniens: Let's get color blind: 
+* chrome: https://chromewebstore.google.com/detail/lets-get-color-blind/bkdgdianpkfahpkmphgehigalpighjck (cassé)
+* chrome: Chrome ne semble pas nativement pouvoir supporter des filtres de daltonisme depuis la console de dev.
+* firefox: https://addons.mozilla.org/fr/firefox/addon/let-s-get-color-blind/ (cassé)
+* firefox: utiliser le mode daltonisme dans accessibilité du debugger pour avoir une idée de ce à quoi ressemble le site vu par les daltoniens.
+
+Pour le code, regarder: https://linuxfr.org/users/see/journaux/colortest-it-simuler-le-daltonisme-avec-des-filtres-css-svg pour voir comment on peut inclure cette option dans le site web.
+* Une des captures du travail de cette persone: http://web.archive.org/web/20150108131207/http://colortest.it/
+* Il faut creuser plus pour espérer voir comment la personne a créé son contenu
+* license de sont code: WTFPL : (https://en.wikipedia.org/wiki/WTFPL)
+
+
+Tentative de création d'un site démo de daltonisme (plustôt réussi): https://daltonism.pingpal.news
+
+Sources pour l'Accessibilité:
+Maddyness -- 8 manières de rendre son site web accessible au personnes handicapées: https://www.maddyness.com/2022/01/20/conseils-site-internet-accessible-handicap/
