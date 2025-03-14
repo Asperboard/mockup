@@ -22,10 +22,16 @@
         <loc>https://asperboard.pingpal.news/html/reset-password/</loc>
     </url>
     <url>
+        <loc>https://asperboard.pingpal.news/html/routes/pro/applications/</loc>
+    </url>
+    <url>
         <loc>https://asperboard.pingpal.news/html/routes/pro/creation/</loc>
     </url>
     <url>
         <loc>https://asperboard.pingpal.news/html/routes/pro/suivi/</loc>
+    </url>
+    <url>
+        <loc>https://asperboard.pingpal.news/html/routes/user/applications/</loc>
     </url>
     <url>
         <loc>https://asperboard.pingpal.news/html/routes/user/dashboard/</loc>
