@@ -117,3 +117,39 @@ Tentative de création d'un site démo de daltonisme (plustôt réussi): https:/
 
 Sources pour l'Accessibilité:
 Maddyness -- 8 manières de rendre son site web accessible au personnes handicapées: https://www.maddyness.com/2022/01/20/conseils-site-internet-accessible-handicap/
+
+
+Polices pour l'accessibilité:
+
+Dyslexiques: (https://www.lexilens.com/fr/quelles-polices-utiliser-pour-les-personnes-dys/)
+
+  * Sans sérif
+  * Arial
+  * Avenir 
+  * Helvetica 
+  * Lucida
+  * Tahoma 
+  * Verdana, qui regroupent ces critères.
+  * Open Dyslexic
+  * Dyslexie font (https://www.dyslexiefont.com/en/typeface/)
+
+malvoyants: (https://www.ux-republic.com/typographie-et-accessibilite-acte-2-les-polices-decritures-specifiques/)
+ * Atkinson Hyperlegible
+ * Luciole 
+
+
+Polices faciles à lire:
+ * (https://www.ux-republic.com/typographie-et-accessibilite-acte-1-comment-bien-choisir-sa-police-decriture/)
+  * Raleway
+  * Fira Sans
+ *
+
+TTS (pour les sites internet):
+ * https://talkify.net (last ditch solution, voice is choppy)
+ * https://talkify.net/web-reader-read-any-website-aloud (allows the user to read a website through their own)
+ * https://ttsreader.com/
+ * https://speechify.com/ (verify authenticity of the voices)
+ * https://elevenlabs.io/fr (voix de bonne qualité, prix acceptable)
+ * https://www.naturalreaders.com/ (voix de très bonne qualité, prix à voir, mais élevé)
+ * For phones, it is native in the user's settings (https://www.reddit.com/r/accessibility/comments/16h653c/making_a_browser_read_a_webpage_contents_aloud/)*
+ * gTTS (module python est bon, mais à voir où finissent les Data)
